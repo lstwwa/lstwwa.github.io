@@ -1,0 +1,516 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Matlab例子 | 原の站</title>
+  <meta name="author" content="原">
+  
+  <meta name="description" content="1.0">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Matlab例子"/>
+  <meta property="og:site_name" content="原の站"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="aligncenter">
+  <nav id="main-nav" class="aligncenter">
+  <h1><a href="/">原の站</a></h1>
+  <h2><a href="/">努力享受每一天</a></h2>
+
+
+<nav id="main-nav" class="aligncenter">
+<!-- 修改副标题居中 -->
+  <ul>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article
+id="post-Matlab例子"
+class="h-entry post"
+>
+
+
+
+ 
+  <div class="post-content">
+    
+    <header>
+      
+             
+              
+              
+              
+              <!--    显示图标
+        <div class="icon"></div>
+                       -->
+                       
+                       
+                       
+                       
+        <time class="dt-published" datetime="2021-04-04T16:00:00.000Z">
+        
+        <a href="/2021/04/05/Matlab%E4%BE%8B%E5%AD%90/">2021-04-05
+        
+        </a></time>
+      
+      
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">Matlab例子</h1>
+  
+
+
+    </header>
+    
+    
+    
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h2 id="准备代码"><a href="#准备代码" class="headerlink" title="准备代码"></a>准备代码</h2><pre><code>clc
+
+clear all 
+</code></pre>
+<span id="more"></span>
+
+<h2 id="周期方波"><a href="#周期方波" class="headerlink" title="周期方波"></a>周期方波</h2><pre><code>T=2;
+
+ A=0.5;
+
+ t=-2*T:0.01:2*T;
+
+ y=A*square(pi*t); 
+
+plot(t,y); 
+
+box off; 
+
+axis((t(1)-0.2*t*(end)+0.2-A-0.1*A+0.1)); 
+</code></pre>
+<h2 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h2><pre><code>t=linspace(-4*pi,4*pi,500); 
+
+y=sinc(t/pi); 
+
+plot(t,y); 
+
+box off; 
+</code></pre>
+<h2 id="卷积矩形函数"><a href="#卷积矩形函数" class="headerlink" title="卷积矩形函数"></a>卷积矩形函数</h2><pre><code>tt1=linspace(-4*pi,4*pi,500); 
+
+tt2=linspace(-4*pi,4*pi,500); 
+
+y1=sinc(tt1/pi); 
+
+y2=sinc(tt2/pi); 
+
+dt = 0.01; 
+
+t1 = 0:dt:2; 
+
+L = length(t1); 
+
+ft = ones(1,L); 
+
+subplot(2,2,1); 
+
+plot(t1,ft); 
+
+axis([0 3 0 1.5]); 
+
+hold on; 
+
+plot([2 2],[0 1]); 
+
+% title(&#39;f(t)&#39;); 
+
+xlabel(&#39;(a)&#39;); 
+
+box off; 
+
+ t2 = 0:
+
+dt:4; 
+
+M = length(t2); 
+
+ht = ones(1,M); 
+
+subplot(2,2,2); 
+
+plot(t2,ht); 
+
+axis([0 5 0 1.5]); 
+
+hold on; 
+
+plot([4 4],[0 1]); 
+
+% title(&#39;h(t)&#39;); 
+
+xlabel(&#39;(b)&#39;); 
+
+box off; 
+
+ y = conv(ft,ht)*dt; 
+
+N = L+M-1; 
+
+t = (0:N-1)*dt; 
+
+subplot(2,1,2); 
+
+plot(t,y); 
+
+% axis( (t(1) - 0.5 * t(end) + 0.50 * max(y) + 0.5) );
+
+ % title(&#39;y(t) = f(t)*h(t),&#39;); 
+
+xlabel(&#39;(c)&#39;); 
+
+box off; 
+
+hold off;
+</code></pre>
+<h2 id="卷积作"><a href="#卷积作" class="headerlink" title="卷积作"></a>卷积作</h2><pre><code>hold on 
+
+num=500; 
+
+dt=0.01; 
+
+t1=linspace(-4*pi,4*pi,num); 
+
+L1=length(t1);
+
+t2=linspace(-4*pi,4*pi,num); 
+
+L2=length(t2); 
+
+ y1=sinc(t1/pi); 
+
+y2=sinc(t2/pi); 
+
+subplot(2,2,1); 
+
+plot(t1,y1); 
+
+legend(&#39;y1&#39;); 
+
+ title(&#39;sinc&#39;); 
+
+xlabel(&#39;(a)&#39;); 
+
+subplot(2,2,2); 
+
+plot(t2,y2); 
+
+legend(&#39;y2&#39;); 
+
+ title(&#39;sinc&#39;); 
+
+xlabel(&#39;(b)&#39;); 
+
+ y=conv(y1,y2)*dt; 
+
+ n=L1+L2-1; 
+
+t=(0:n-1)*dt; 
+
+subplot(2,1,2); 
+
+plot(t,y); 
+
+legend(&#39;y&#39;); 
+
+hold off 
+</code></pre>
+<h2 id="单位冲击响应，阶跃响应"><a href="#单位冲击响应，阶跃响应" class="headerlink" title="单位冲击响应，阶跃响应"></a>单位冲击响应，阶跃响应</h2><pre><code>num=1;
+
+den=[1 3 2];
+
+sys=tf(num,den);
+
+t=0:0.01:6;
+
+ht=impulse(sys,t);
+
+gt=step(sys,t);
+
+ha=exp(-t)-exp(-2*t);
+
+ga=0.05-exp(-t)+0.5*exp(-2*t);
+
+subplot(211);
+
+plot(t,ht,&#39; -&#39;,t,ha,&#39; -.&#39;);
+
+box off;
+
+xlabel(&#39;(a)-冲击响应&#39;);
+
+subplot(212);
+
+plot(t,gt,&#39; -&#39;,t,ga,&#39; -.&#39;);
+
+xlabel(&#39;(b)-阶跃响应&#39;);
+
+box off;
+</code></pre>
+<h2 id="零状态响应"><a href="#零状态响应" class="headerlink" title="零状态响应"></a>零状态响应</h2><pre><code>sys=tf(1,[1 3 2]);
+
+t=0:0.01:6;
+
+f=ones(1,length(t));
+
+y=lsim(sys,f,t);
+
+gt=step(sys,t);
+
+plot(t,y,&#39; -&#39;,t,gt,&#39; -.&#39;);
+
+xlabel(&#39;t&#39;);
+
+ylabel(&#39;y(t)&#39;);
+
+box off; title(&#39;零状态响应&#39;);
+</code></pre>
+<h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><pre><code>num=1;
+
+den=[1 2^0.5 1];
+
+sys=tf(num,den);
+
+t=0:0.01:2;
+
+f=ones(1,length(t)); %冲击响应 
+
+ht=impulse(sys,t); 
+
+subplot(221); 
+
+plot(t,ht,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(a)-冲击响应&#39;); 
+
+%阶跃响应 
+
+gt=step(sys,t); 
+
+subplot(222); 
+
+plot(t,gt,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(b)-阶跃响应&#39;); 
+
+ %零状态响应 
+
+yl=lsim(sys,f,t); 
+
+subplot(223); 
+
+plot(t,yl,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(c)-零状态响应&#39;); 
+
+ %卷积 
+
+dt=0.01; 
+
+L1=length(t); 
+
+L2=length(t); 
+
+yc=conv(ht,gt)*dt; 
+
+ n=L1+L2-1; 
+
+t=(0:n-1)*dt; 
+
+subplot(224); 
+
+plot(t,yc,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(d)-卷积（规定xy范围）&#39;); 
+
+% plot(t,yc,&#39; -&#39;); 
+
+% box off; 
+
+% xlabel(&#39;(e)-卷积（不规定xy范围）&#39;);
+</code></pre>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/2021-04/">2021-04</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/%E4%B8%AA%E4%BA%BA/">个人</a>, <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>, <a href="/tags/Matlab/">Matlab</a>
+  </div>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">记录</h3>
+  <ul class="entry">
+       
+      <li>页码更新了</li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">快链</h3>
+  <ul class="entry">
+       
+      <li><a target="_blank" rel="noopener" href="https://www.baidu.com">百度</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.bing.com">必应</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="http://cet.neea.edu.cn/">大学生英语四六级</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.gxeea.cn/">广西自考</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">学信网</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://cy.ncss.cn/">全国大学生创业服务网</a></li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/FPGA%E5%AE%9E%E9%AA%8C/">FPGA实验</a><small>1</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>4</small></li>
+  
+    <li><a href="/tags/%E4%B8%AA%E4%BA%BA/">个人</a><small>2</small></li>
+  
+    <li><a href="/tags/%E4%BD%9C%E4%B8%9A/">作业</a><small>1</small></li>
+  
+    <li><a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%AF%BC%E4%B9%A6/">实验指导书</a><small>1</small></li>
+  
+    <li><a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a><small>1</small></li>
+  
+    <li><a href="/tags/%E7%A8%8B%E5%BA%8F/">程序</a><small>1</small></li>
+  
+    <li><a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a><small>3</small></li>
+  
+    <li><a href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a><small>2</small></li>
+  
+    <li><a href="/tags/%E8%AE%BA%E6%96%87/">论文</a><small>1</small></li>
+  
+    <li><a href="/tags/%E9%80%9A%E4%BF%A1%E7%94%B5%E5%AD%90%E7%BA%BF%E8%B7%AF/">通信电子线路</a><small>1</small></li>
+  
+    <li><a href="/tags/%E9%BB%98%E8%AE%A4/">默认</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">归档</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/2021-04/">2021-04</a><small>11</small></li>
+  
+    <li><a href="/categories/2021-05/">2021-05</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="aligncenter">
+   苟利国家生死以，岂因福祸避趋之。
+</div>
+<div class="clearfix"></div>
+
+
+
+</footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+</body>
+</html>
+

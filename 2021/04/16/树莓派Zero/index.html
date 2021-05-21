@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>树莓派Zero | 原の站</title>
+  <meta name="author" content="原">
+  
+  <meta name="description" content="1.0">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="树莓派Zero"/>
+  <meta property="og:site_name" content="原の站"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header id="header" class="inner"><div class="aligncenter">
+  <nav id="main-nav" class="aligncenter">
+  <h1><a href="/">原の站</a></h1>
+  <h2><a href="/">努力享受每一天</a></h2>
+
+
+<nav id="main-nav" class="aligncenter">
+<!-- 修改副标题居中 -->
+  <ul>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article
+id="post-树莓派Zero"
+class="h-entry post"
+>
+
+
+
+ 
+  <div class="post-content">
+    
+    <header>
+      
+             
+              
+              
+              
+              <!--    显示图标
+        <div class="icon"></div>
+                       -->
+                       
+                       
+                       
+                       
+        <time class="dt-published" datetime="2021-04-15T16:00:00.000Z">
+        
+        <a href="/2021/04/16/%E6%A0%91%E8%8E%93%E6%B4%BEZero/">2021-04-16
+        
+        </a></time>
+      
+      
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">树莓派Zero</h1>
+  
+
+
+    </header>
+    
+    
+    
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h1 id="树莓派Zero介绍"><a href="#树莓派Zero介绍" class="headerlink" title="树莓派Zero介绍"></a>树莓派Zero介绍</h1><p>树莓派分为啊吧啊吧啊吧啊吧</p>
+<span id="more"></span>
+
+
+<h1 id="启动树莓派Zero"><a href="#启动树莓派Zero" class="headerlink" title="启动树莓派Zero"></a>启动树莓派Zero</h1><h2 id="镜像的下载与制作"><a href="#镜像的下载与制作" class="headerlink" title="镜像的下载与制作"></a>镜像的下载与制作</h2><h3 id="下载选项"><a href="#下载选项" class="headerlink" title="下载选项"></a>下载选项</h3><p>官方的下载地址</p>
+<pre><code>https://www.raspberrypi.org/software/operating-systems/
+</code></pre>
+<ul>
+<li>其中有三个选择与其他系统，这里只介绍官方系统：<blockquote>
+<p>1:Raspberry Pi OS with desktop and recommended software<br>2:Raspberry Pi OS with desktop<br>3:Raspberry Pi OS Lite</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<ul>
+<li>不会选择？<blockquote>
+<p>如果是小白第一次接触树莓派，请选择，1<br>如果已经使用过并且对功能了解，请选择，2<br>如果无需桌面（比如Zero）可以选择，3</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="写入SD卡"><a href="#写入SD卡" class="headerlink" title="写入SD卡"></a>写入SD卡</h3><h4 id="格式化SD卡"><a href="#格式化SD卡" class="headerlink" title="格式化SD卡"></a>格式化SD卡</h4><ul>
+<li>这里建议优先对SD卡进行格式化避免麻烦<blockquote>
+<p>sdcardformatter下载地址：</p>
+<pre><code>  https://www.sdcard.org/downloads/formatter/
+</code></pre>
+<p>主网站进不去？这里是第三方网站：</p>
+<pre><code>  https://www.sdcardformatter.com/download/
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<h4 id="写入SD卡-1"><a href="#写入SD卡-1" class="headerlink" title="写入SD卡"></a>写入SD卡</h4><ul>
+<li>为了避免麻烦，这里可以拔出所有USB设备以防错误操作导致数据丢失。<blockquote>
+<p>选择固件——&gt;选择设备——&gt;刷写</p>
+<pre><code>  https://sourceforge.net/projects/win32diskimager/files/Archive/
+</code></pre>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>还没结束，这时你将得到一个打不开的盘以及一个boot</li>
+<li>这时windows会提醒你格式化SD卡，请<strong>取消</strong>该选项框</li>
+</ul>
+<h4 id="新建ssh文件"><a href="#新建ssh文件" class="headerlink" title="新建ssh文件"></a>新建ssh文件</h4><ul>
+<li>进入boot盘<blockquote>
+<p>这里你需要创建一个</p>
+<pre><code>  ssh
+</code></pre>
+</blockquote>
+</li>
+<li>快速的创建方法是新建一个.txt文件，命名为ssh.txt后删除<del>.txt</del></li>
+<li>如果你发现你的windows创建txt后后缀消失了，请点击<strong>文件夹选项</strong>打开<strong>显示后缀</strong></li>
+</ul>
+<h3 id="如果没有屏幕，键盘，鼠标应该怎么办？"><a href="#如果没有屏幕，键盘，鼠标应该怎么办？" class="headerlink" title="如果没有屏幕，键盘，鼠标应该怎么办？"></a>如果没有屏幕，键盘，鼠标应该怎么办？</h3><p>连接wifi或者连接网线，在网络连接中只有通过查看路由器或者通过nmap等工具的扫描可以得出ip，但是在树莓派没有网线接口或者需要wifi时，可以通过下列方法来连接网络。</p>
+<ul>
+<li>在boot分区中创建文件名字为<pre><code>   wpa_supplicant.conf         
+</code></pre>
+</li>
+<li>随后在该文件中写入以下内容<pre><code>  country=CN
+  ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+  update_config=1
+   
+  network=&#123;
+  ssid=&quot;WiFi-A&quot;  #你的Wi-Fi名字
+  psk=&quot;12345678&quot; #你的Wi-Fi密码
+  key_mgmt=WPA-PSK #Wi-Fi类型
+  priority=1     #优先级
+  &#125;
+   
+  network=&#123;
+  ssid=&quot;WiFi-B&quot;
+  psk=&quot;12345678&quot;
+  key_mgmt=WPA-PSK
+  priority=2
+  scan_ssid=1  #如果需要连接隐藏Wi-Fi
+    &#125;
+</code></pre>
+</li>
+</ul>
+<h3 id="连接树莓派"><a href="#连接树莓派" class="headerlink" title="连接树莓派"></a>连接树莓派</h3><h1 id="树莓派Zero基本命令"><a href="#树莓派Zero基本命令" class="headerlink" title="树莓派Zero基本命令"></a>树莓派Zero基本命令</h1><h1 id="树莓派建立SMB服务"><a href="#树莓派建立SMB服务" class="headerlink" title="树莓派建立SMB服务"></a>树莓派建立SMB服务</h1><h1 id="树莓派建立wordpress博客"><a href="#树莓派建立wordpress博客" class="headerlink" title="树莓派建立wordpress博客"></a>树莓派建立wordpress博客</h1><h1 id="树莓派使用Oled"><a href="#树莓派使用Oled" class="headerlink" title="树莓派使用Oled"></a>树莓派使用Oled</h1><h1 id="树莓派注意"><a href="#树莓派注意" class="headerlink" title="树莓派注意"></a>树莓派注意</h1><h1 id="资源列表"><a href="#资源列表" class="headerlink" title="资源列表"></a>资源列表</h1><h1 id="GPIO参照表"><a href="#GPIO参照表" class="headerlink" title="GPIO参照表"></a>GPIO参照表</h1><table>
+<thead>
+<tr>
+<th>BCM</th>
+<th>功能</th>
+<th>物理</th>
+<th>物理</th>
+<th>功能</th>
+<th>BCM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>3.3V</td>
+<td>01</td>
+<td>02</td>
+<td>5V</td>
+<td></td>
+</tr>
+<tr>
+<td>02</td>
+<td>SDA1</td>
+<td>03</td>
+<td>04</td>
+<td>5V</td>
+<td></td>
+</tr>
+<tr>
+<td>03</td>
+<td>SCL1</td>
+<td>05</td>
+<td>06</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>04</td>
+<td>GPIO7</td>
+<td>07</td>
+<td>08</td>
+<td>TXD</td>
+<td>14</td>
+</tr>
+<tr>
+<td></td>
+<td>GND</td>
+<td>09</td>
+<td>10</td>
+<td>RXD</td>
+<td>15</td>
+</tr>
+<tr>
+<td>17</td>
+<td>GPIO.00</td>
+<td>11</td>
+<td>12</td>
+<td>GPIO.01</td>
+<td>18</td>
+</tr>
+<tr>
+<td>27</td>
+<td>GPIO.02</td>
+<td>13</td>
+<td>14</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>GPIO.03</td>
+<td>15</td>
+<td>16</td>
+<td>GPIO.04</td>
+<td>23</td>
+</tr>
+<tr>
+<td></td>
+<td>3.3V</td>
+<td>17</td>
+<td>18</td>
+<td>GPIO.05</td>
+<td>24</td>
+</tr>
+<tr>
+<td>10</td>
+<td>MOSI</td>
+<td>19</td>
+<td>20</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>09</td>
+<td>MISO</td>
+<td>21</td>
+<td>22</td>
+<td>GPIO.06</td>
+<td>25</td>
+</tr>
+<tr>
+<td>11</td>
+<td>SCLK</td>
+<td>23</td>
+<td>24</td>
+<td>CE0</td>
+<td>08</td>
+</tr>
+<tr>
+<td></td>
+<td>GND</td>
+<td>25</td>
+<td>26</td>
+<td>CE1</td>
+<td>07</td>
+</tr>
+<tr>
+<td>00</td>
+<td>SDA.0</td>
+<td>27</td>
+<td>28</td>
+<td>SCL.0</td>
+<td>01</td>
+</tr>
+<tr>
+<td>05</td>
+<td>GPIO.21</td>
+<td>29</td>
+<td>30</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>06</td>
+<td>GPIO.22</td>
+<td>31</td>
+<td>32</td>
+<td>GPIO.26</td>
+<td>12</td>
+</tr>
+<tr>
+<td>13</td>
+<td>GPIO.23</td>
+<td>33</td>
+<td>34</td>
+<td>GND</td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>GPIO.24</td>
+<td>35</td>
+<td>36</td>
+<td>GPIO.27</td>
+<td>16</td>
+</tr>
+<tr>
+<td>26</td>
+<td>GPIO.25</td>
+<td>37</td>
+<td>38</td>
+<td>GPIO.28</td>
+<td>20</td>
+</tr>
+<tr>
+<td>26</td>
+<td>GND</td>
+<td>39</td>
+<td>40</td>
+<td>GPIO.29</td>
+<td>21</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/2021-04/">2021-04</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>, <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a>
+  </div>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">记录</h3>
+  <ul class="entry">
+       
+      <li>页码更新了</li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">快链</h3>
+  <ul class="entry">
+       
+      <li><a target="_blank" rel="noopener" href="https://www.baidu.com">百度</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.bing.com">必应</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="http://cet.neea.edu.cn/">大学生英语四六级</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.gxeea.cn/">广西自考</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">学信网</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://cy.ncss.cn/">全国大学生创业服务网</a></li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/FPGA%E5%AE%9E%E9%AA%8C/">FPGA实验</a><small>1</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>4</small></li>
+  
+    <li><a href="/tags/%E4%B8%AA%E4%BA%BA/">个人</a><small>2</small></li>
+  
+    <li><a href="/tags/%E4%BD%9C%E4%B8%9A/">作业</a><small>1</small></li>
+  
+    <li><a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%AF%BC%E4%B9%A6/">实验指导书</a><small>1</small></li>
+  
+    <li><a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a><small>1</small></li>
+  
+    <li><a href="/tags/%E7%A8%8B%E5%BA%8F/">程序</a><small>1</small></li>
+  
+    <li><a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a><small>3</small></li>
+  
+    <li><a href="/tags/%E8%8B%B1%E8%AF%AD/">英语</a><small>2</small></li>
+  
+    <li><a href="/tags/%E8%AE%BA%E6%96%87/">论文</a><small>1</small></li>
+  
+    <li><a href="/tags/%E9%80%9A%E4%BF%A1%E7%94%B5%E5%AD%90%E7%BA%BF%E8%B7%AF/">通信电子线路</a><small>1</small></li>
+  
+    <li><a href="/tags/%E9%BB%98%E8%AE%A4/">默认</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">归档</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/2021-04/">2021-04</a><small>11</small></li>
+  
+    <li><a href="/categories/2021-05/">2021-05</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="aligncenter">
+   苟利国家生死以，岂因福祸避趋之。
+</div>
+<div class="clearfix"></div>
+
+
+
+</footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+</body>
+</html>
+

@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Matlab例子 | 原の站</title>
+  <title>Matlab函数 | 原の站</title>
   <meta name="author" content="原">
   
   <meta name="description" content="1.0">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Matlab例子"/>
+  <meta property="og:title" content="Matlab函数"/>
   <meta property="og:site_name" content="原の站"/>
 
   
@@ -55,7 +55,7 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article
-id="post-Matlab例子"
+id="post-Matlab函数"
 class="h-entry post"
 >
 
@@ -79,7 +79,7 @@ class="h-entry post"
                        
         <time class="dt-published" datetime="2021-04-04T16:00:00.000Z">
         
-        <a href="/2021/04/05/Matlab%E4%BE%8B%E5%AD%90/">2021-04-05
+        <a href="/c1b18207.html">2021-04-05
         
         </a></time>
       
@@ -87,7 +87,7 @@ class="h-entry post"
       
       
   
-    <h1 class="p-name title" itemprop="headline name">Matlab例子</h1>
+    <h1 class="p-name title" itemprop="headline name">Matlab函数</h1>
   
 
 
@@ -97,291 +97,120 @@ class="h-entry post"
     
     <div class="e-content entry" itemprop="articleBody">
       
-        <h2 id="准备代码"><a href="#准备代码" class="headerlink" title="准备代码"></a>准备代码</h2><pre><code>clc
-
-clear all 
+        <h2 id="图形保持功能"><a href="#图形保持功能" class="headerlink" title="图形保持功能"></a>图形保持功能</h2><pre><code>hold on 
 </code></pre>
 <span id="more"></span>
 
-<h2 id="周期方波"><a href="#周期方波" class="headerlink" title="周期方波"></a>周期方波</h2><pre><code>T=2;
-
- A=0.5;
-
- t=-2*T:0.01:2*T;
-
- y=A*square(pi*t); 
-
-plot(t,y); 
-
-box off; 
-
-axis((t(1)-0.2*t*(end)+0.2-A-0.1*A+0.1)); 
+<h2 id="绘制一个矩阵"><a href="#绘制一个矩阵" class="headerlink" title="绘制一个矩阵"></a>绘制一个矩阵</h2><pre><code>Z=[1+2,2-2,3-2;1+1,1+2,1-1;2-1,1+3,4+2;2-1,1+4,4+1] 
+n=length(Z) 
 </code></pre>
-<h2 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h2><pre><code>t=linspace(-4*pi,4*pi,500); 
-
-y=sinc(t/pi); 
-
-plot(t,y); 
-
-box off; 
+<h2 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h2><pre><code>size(A,n)
 </code></pre>
-<h2 id="卷积矩形函数"><a href="#卷积矩形函数" class="headerlink" title="卷积矩形函数"></a>卷积矩形函数</h2><pre><code>tt1=linspace(-4*pi,4*pi,500); 
+<blockquote>
+<p>% n=1 该语句返回的时矩阵A的行数</p>
+<p>% n=2 该语句返回的时矩阵A的列数</p>
+</blockquote>
+<pre><code>m1=size(Z,1)
 
-tt2=linspace(-4*pi,4*pi,500); 
-
-y1=sinc(tt1/pi); 
-
-y2=sinc(tt2/pi); 
-
-dt = 0.01; 
-
-t1 = 0:dt:2; 
-
-L = length(t1); 
-
-ft = ones(1,L); 
-
-subplot(2,2,1); 
-
-plot(t1,ft); 
-
-axis([0 3 0 1.5]); 
-
-hold on; 
-
-plot([2 2],[0 1]); 
-
-% title(&#39;f(t)&#39;); 
-
-xlabel(&#39;(a)&#39;); 
-
-box off; 
-
- t2 = 0:
-
-dt:4; 
-
-M = length(t2); 
-
-ht = ones(1,M); 
-
-subplot(2,2,2); 
-
-plot(t2,ht); 
-
-axis([0 5 0 1.5]); 
-
-hold on; 
-
-plot([4 4],[0 1]); 
-
-% title(&#39;h(t)&#39;); 
-
-xlabel(&#39;(b)&#39;); 
-
-box off; 
-
- y = conv(ft,ht)*dt; 
-
-N = L+M-1; 
-
-t = (0:N-1)*dt; 
-
-subplot(2,1,2); 
-
-plot(t,y); 
-
-% axis( (t(1) - 0.5 * t(end) + 0.50 * max(y) + 0.5) );
-
- % title(&#39;y(t) = f(t)*h(t),&#39;); 
-
-xlabel(&#39;(c)&#39;); 
-
-box off; 
-
-hold off;
+m2=size(Z)
 </code></pre>
-<h2 id="卷积作"><a href="#卷积作" class="headerlink" title="卷积作"></a>卷积作</h2><pre><code>hold on 
-
-num=500; 
-
-dt=0.01; 
-
-t1=linspace(-4*pi,4*pi,num); 
-
-L1=length(t1);
-
-t2=linspace(-4*pi,4*pi,num); 
-
-L2=length(t2); 
-
- y1=sinc(t1/pi); 
-
-y2=sinc(t2/pi); 
-
-subplot(2,2,1); 
-
-plot(t1,y1); 
-
-legend(&#39;y1&#39;); 
-
- title(&#39;sinc&#39;); 
-
-xlabel(&#39;(a)&#39;); 
-
-subplot(2,2,2); 
-
-plot(t2,y2); 
-
-legend(&#39;y2&#39;); 
-
- title(&#39;sinc&#39;); 
-
-xlabel(&#39;(b)&#39;); 
-
- y=conv(y1,y2)*dt; 
-
- n=L1+L2-1; 
-
-t=(0:n-1)*dt; 
-
-subplot(2,1,2); 
-
-plot(t,y); 
-
-legend(&#39;y&#39;); 
-
-hold off 
+<blockquote>
+<p>行数4列数3</p>
+</blockquote>
+<h2 id="绘制字符串"><a href="#绘制字符串" class="headerlink" title="绘制字符串"></a>绘制字符串</h2><p>字符串<br>    str=’lstwwa’<br>字符串长度<br>    l=length(str)</p>
+<h2 id="绘制全1矩阵"><a href="#绘制全1矩阵" class="headerlink" title="绘制全1矩阵"></a>绘制全1矩阵</h2><pre><code>A=ones(4) 
 </code></pre>
-<h2 id="单位冲击响应，阶跃响应"><a href="#单位冲击响应，阶跃响应" class="headerlink" title="单位冲击响应，阶跃响应"></a>单位冲击响应，阶跃响应</h2><pre><code>num=1;
-
-den=[1 3 2];
-
-sys=tf(num,den);
-
-t=0:0.01:6;
-
-ht=impulse(sys,t);
-
-gt=step(sys,t);
-
-ha=exp(-t)-exp(-2*t);
-
-ga=0.05-exp(-t)+0.5*exp(-2*t);
-
-subplot(211);
-
-plot(t,ht,&#39; -&#39;,t,ha,&#39; -.&#39;);
-
-box off;
-
-xlabel(&#39;(a)-冲击响应&#39;);
-
-subplot(212);
-
-plot(t,gt,&#39; -&#39;,t,ga,&#39; -.&#39;);
-
-xlabel(&#39;(b)-阶跃响应&#39;);
-
-box off;
+<h2 id="plot单条曲线"><a href="#plot单条曲线" class="headerlink" title="plot单条曲线"></a>plot单条曲线</h2><pre><code>x=1;y=2; % plot(x,y) plot(x,y) 
 </code></pre>
-<h2 id="零状态响应"><a href="#零状态响应" class="headerlink" title="零状态响应"></a>零状态响应</h2><pre><code>sys=tf(1,[1 3 2]);
+<h2 id="plot多条曲线"><a href="#plot多条曲线" class="headerlink" title="plot多条曲线"></a>plot多条曲线</h2><pre><code>x=-pi:pi/20:pi; 
 
-t=0:0.01:6;
+plot(x,cos(x)); 
 
-f=ones(1,length(t));
+hold on % 图形保持功能 
 
-y=lsim(sys,f,t);
+% plot(x1,y1，’option’, x2,y2，’option’) 
 
-gt=step(sys,t);
-
-plot(t,y,&#39; -&#39;,t,gt,&#39; -.&#39;);
-
-xlabel(&#39;t&#39;);
-
-ylabel(&#39;y(t)&#39;);
-
-box off; title(&#39;零状态响应&#39;);
+plot(x,cos(x),&#39;-r&#39;,x,sin(x),&#39;-.b&#39;);
 </code></pre>
-<h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><pre><code>num=1;
+<h2 id="绘制图像1"><a href="#绘制图像1" class="headerlink" title="绘制图像1"></a>绘制图像1</h2><pre><code>x=1:0.1*pi:2*pi;
 
-den=[1 2^0.5 1];
+y=sin(x); 
 
-sys=tf(num,den);
+plot(x,y); 
 
-t=0:0.01:2;
+xlabel(&#39;x(0-2\pi)&#39;); % 在x轴写上x(0-2\pi) 
 
-f=ones(1,length(t)); %冲击响应 
+ylabel(&#39;y=sin(x)&#39;); % 在y轴写上y=sin(x) 
 
-ht=impulse(sys,t); 
+title(&#39;正弦函数&#39;); % 在标题写上正弦函数 
 
-subplot(221); 
+text(pi,sin(pi),&#39;\leftarrowsin(t)=0&#39;,&#39;fontsize&#39;,16); 
 
-plot(t,ht,&#39; -&#39;); 
+% 在函数线上画箭头 
+</code></pre>
+<h2 id="gtext与fontsize"><a href="#gtext与fontsize" class="headerlink" title="gtext与fontsize"></a>gtext与fontsize</h2><pre><code>y=sin(x); 
 
-axis([0 2 0 0.8]) ;
+plot(x,y); 
 
-box off; 
+% gtext(&#39;函数名称&#39;,&#39;fontsize&#39;,字体大小) 
 
-xlabel(&#39;(a)-冲击响应&#39;); 
+% gtext(&#39;string1&#39;,&#39;fontsize&#39;,12) 
 
-%阶跃响应 
+gtext(&#39;y=sin(x)&#39;,&#39;fontsize&#39;,12); 
 
-gt=step(sys,t); 
+ % gtext选择y=sin(x)显示在图像位置 
+</code></pre>
+<h2 id="legend"><a href="#legend" class="headerlink" title="legend"></a>legend</h2><pre><code>x=-pi:pi/20:pi; 
 
-subplot(222); 
+plot(x,cos(x),&#39;-ro&#39;,x,sin(x),&#39;-.b&#39;); 
 
-plot(t,gt,&#39; -&#39;); 
+% legend(&#39;函数名&#39;,&#39;函数名&#39;) 
 
-axis([0 2 0 0.8]) ;
+legend(&#39;cos&#39;,&#39;sin&#39;); 
 
-box off; 
+ % legend为图形中所有的曲线进行自动标注 
+</code></pre>
+<h2 id="axis"><a href="#axis" class="headerlink" title="axis"></a>axis</h2><pre><code>x=0:.025:pi/2; 
 
-xlabel(&#39;(b)-阶跃响应&#39;); 
+plot(x,tan(x),&#39;-ro&#39;) 
 
- %零状态响应 
+subplot(2,1,1);plot(x,tan(x),&#39;-ro&#39;);
 
-yl=lsim(sys,f,t); 
+axis([0 pi/2 0 5]); % axis控制坐标轴特征 
 
-subplot(223); 
+subplot(2,1,2);plot(x,tan(x),&#39;-ro&#39;) 
+</code></pre>
+<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><pre><code>x=0:0.1*pi:2*pi; 
 
-plot(t,yl,&#39; -&#39;); 
+y=sin(x); 
 
-axis([0 2 0 0.8]) ;
+plot(x,y); 
 
-box off; 
+grid on % 添加网格线 
+</code></pre>
+<h2 id="box与grid"><a href="#box与grid" class="headerlink" title="box与grid"></a>box与grid</h2><pre><code>x=0:0.1*pi:2*pi; 
 
-xlabel(&#39;(c)-零状态响应&#39;); 
+y=sin(x); 
 
- %卷积 
+subplot(2,1,1);plot(x,y);box off % 添加网格线 
 
-dt=0.01; 
+subplot(2,1,2);plot(x,y);grid on % 控制坐标轴封闭 
+</code></pre>
+<h2 id="income"><a href="#income" class="headerlink" title="income"></a>income</h2><pre><code>% subplot(m,n,p) 
 
-L1=length(t); 
+% subplot(窗口宽,窗口长,第几个窗口创建函数) 
 
-L2=length(t); 
+income=[3.2 4.1 5.0 5.6]; 
 
-yc=conv(ht,gt)*dt; 
+outgo=[2.5 4.0 3.35 4.9]; 
 
- n=L1+L2-1; 
+% subplot(窗口2,窗口1,第1个窗口创建函数income) 
 
-t=(0:n-1)*dt; 
+subplot(2,1,1);plot(income); 
 
-subplot(224); 
+% subplot(窗口2,窗口1,第2个窗口创建函数outgo) 
 
-plot(t,yc,&#39; -&#39;); 
-
-axis([0 2 0 0.8]) ;
-
-box off; 
-
-xlabel(&#39;(d)-卷积（规定xy范围）&#39;); 
-
-% plot(t,yc,&#39; -&#39;); 
-
-% box off; 
-
-% xlabel(&#39;(e)-卷积（不规定xy范围）&#39;);
+subplot(2,1,2);plot(outgo);
 </code></pre>
 
       

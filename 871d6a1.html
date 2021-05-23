@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Matlab函数 | 原の站</title>
+  <title>FPGA历史作业 | 原の站</title>
   <meta name="author" content="原">
   
   <meta name="description" content="1.0">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Matlab函数"/>
+  <meta property="og:title" content="FPGA历史作业"/>
   <meta property="og:site_name" content="原の站"/>
 
   
@@ -55,7 +55,7 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article
-id="post-Matlab函数"
+id="post-FPGA历史作业"
 class="h-entry post"
 >
 
@@ -77,9 +77,9 @@ class="h-entry post"
                        
                        
                        
-        <time class="dt-published" datetime="2021-04-04T16:00:00.000Z">
+        <time class="dt-published" datetime="2021-04-10T16:00:00.000Z">
         
-        <a href="/2021/04/05/Matlab%E5%87%BD%E6%95%B0/">2021-04-05
+        <a href="/871d6a1.html">2021-04-11
         
         </a></time>
       
@@ -87,7 +87,7 @@ class="h-entry post"
       
       
   
-    <h1 class="p-name title" itemprop="headline name">Matlab函数</h1>
+    <h1 class="p-name title" itemprop="headline name">FPGA历史作业</h1>
   
 
 
@@ -97,120 +97,73 @@ class="h-entry post"
     
     <div class="e-content entry" itemprop="articleBody">
       
-        <h2 id="图形保持功能"><a href="#图形保持功能" class="headerlink" title="图形保持功能"></a>图形保持功能</h2><pre><code>hold on 
-</code></pre>
+        <p>这个是2021年4月的作业</p>
 <span id="more"></span>
 
-<h2 id="绘制一个矩阵"><a href="#绘制一个矩阵" class="headerlink" title="绘制一个矩阵"></a>绘制一个矩阵</h2><pre><code>Z=[1+2,2-2,3-2;1+1,1+2,1-1;2-1,1+3,4+2;2-1,1+4,4+1] 
-n=length(Z) 
+<p>四人抢答器</p>
+<pre><code>module L4S1(clr,clk,ina,inb,inc,ind,f,times,cout);
+
+input clr,clk,ina,inb,inc,ind;
+output reg f,cout;
+output reg [3:0] times;
+
+always @(posedge clk)
+begin
+        if (times&lt;=10) 
+        begin 
+            cout = 1;
+            if(times==10)
+            begin
+                cout = 0;
+            end
+            else times=times + 1;
+        end
+end
+
+
+always @(cout)
+begin
+    if (cout == 1) 
+    begin
+      if (ina==0 &amp; inb == 0 &amp; inc == 0 &amp; ind == 0) begin f=0; end    
+        else if (ina==0 &amp; inb == 0 &amp; inc == 0 &amp; ind == 1) begin f=0; end
+        else if (ina==0 &amp; inb == 0 &amp; inc == 1 &amp; ind == 0) begin f=0; end
+        else if (ina==0 &amp; inb == 0 &amp; inc == 1 &amp; ind == 1) begin f=0; end
+        
+        else if (ina==0 &amp; inb == 1 &amp; inc == 0 &amp; ind == 0) begin f=0; end
+        else if (ina==0 &amp; inb == 1 &amp; inc == 0 &amp; ind == 1) begin f=0; end
+        else if (ina==0 &amp; inb == 1 &amp; inc == 1 &amp; ind == 0) begin f=0; end
+        else if (ina==0 &amp; inb == 1 &amp; inc == 1 &amp; ind == 1) begin f=1; end
+        
+        else if (ina==1 &amp; inb == 0 &amp; inc == 0 &amp; ind == 0) begin f=0; end
+        else if (ina==1 &amp; inb == 0 &amp; inc == 0 &amp; ind == 1) begin f=0; end
+        else if (ina==1 &amp; inb == 0 &amp; inc == 1 &amp; ind == 0) begin f=0; end
+        else if (ina==1 &amp; inb == 0 &amp; inc == 1 &amp; ind == 1) begin f=1; end
+        
+        else if (ina==1 &amp; inb == 1 &amp; inc == 0 &amp; ind == 0) begin f=0; end
+        else if (ina==1 &amp; inb == 1 &amp; inc == 0 &amp; ind == 1) begin f=1; end
+        else if (ina==1 &amp; inb == 1 &amp; inc == 1 &amp; ind == 0) begin f=1; end
+        else if (ina==1 &amp; inb == 1 &amp; inc == 1 &amp; ind == 1) begin f=1; end
+        else begin f=0; end
+    end
+ end
+endmodule
 </code></pre>
-<h2 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h2><pre><code>size(A,n)
-</code></pre>
-<blockquote>
-<p>% n=1 该语句返回的时矩阵A的行数</p>
-<p>% n=2 该语句返回的时矩阵A的列数</p>
-</blockquote>
-<pre><code>m1=size(Z,1)
-
-m2=size(Z)
-</code></pre>
-<blockquote>
-<p>行数4列数3</p>
-</blockquote>
-<h2 id="绘制字符串"><a href="#绘制字符串" class="headerlink" title="绘制字符串"></a>绘制字符串</h2><p>字符串<br>    str=’lstwwa’<br>字符串长度<br>    l=length(str)</p>
-<h2 id="绘制全1矩阵"><a href="#绘制全1矩阵" class="headerlink" title="绘制全1矩阵"></a>绘制全1矩阵</h2><pre><code>A=ones(4) 
-</code></pre>
-<h2 id="plot单条曲线"><a href="#plot单条曲线" class="headerlink" title="plot单条曲线"></a>plot单条曲线</h2><pre><code>x=1;y=2; % plot(x,y) plot(x,y) 
-</code></pre>
-<h2 id="plot多条曲线"><a href="#plot多条曲线" class="headerlink" title="plot多条曲线"></a>plot多条曲线</h2><pre><code>x=-pi:pi/20:pi; 
-
-plot(x,cos(x)); 
-
-hold on % 图形保持功能 
-
-% plot(x1,y1，’option’, x2,y2，’option’) 
-
-plot(x,cos(x),&#39;-r&#39;,x,sin(x),&#39;-.b&#39;);
-</code></pre>
-<h2 id="绘制图像1"><a href="#绘制图像1" class="headerlink" title="绘制图像1"></a>绘制图像1</h2><pre><code>x=1:0.1*pi:2*pi;
-
-y=sin(x); 
-
-plot(x,y); 
-
-xlabel(&#39;x(0-2\pi)&#39;); % 在x轴写上x(0-2\pi) 
-
-ylabel(&#39;y=sin(x)&#39;); % 在y轴写上y=sin(x) 
-
-title(&#39;正弦函数&#39;); % 在标题写上正弦函数 
-
-text(pi,sin(pi),&#39;\leftarrowsin(t)=0&#39;,&#39;fontsize&#39;,16); 
-
-% 在函数线上画箭头 
-</code></pre>
-<h2 id="gtext与fontsize"><a href="#gtext与fontsize" class="headerlink" title="gtext与fontsize"></a>gtext与fontsize</h2><pre><code>y=sin(x); 
-
-plot(x,y); 
-
-% gtext(&#39;函数名称&#39;,&#39;fontsize&#39;,字体大小) 
-
-% gtext(&#39;string1&#39;,&#39;fontsize&#39;,12) 
-
-gtext(&#39;y=sin(x)&#39;,&#39;fontsize&#39;,12); 
-
- % gtext选择y=sin(x)显示在图像位置 
-</code></pre>
-<h2 id="legend"><a href="#legend" class="headerlink" title="legend"></a>legend</h2><pre><code>x=-pi:pi/20:pi; 
-
-plot(x,cos(x),&#39;-ro&#39;,x,sin(x),&#39;-.b&#39;); 
-
-% legend(&#39;函数名&#39;,&#39;函数名&#39;) 
-
-legend(&#39;cos&#39;,&#39;sin&#39;); 
-
- % legend为图形中所有的曲线进行自动标注 
-</code></pre>
-<h2 id="axis"><a href="#axis" class="headerlink" title="axis"></a>axis</h2><pre><code>x=0:.025:pi/2; 
-
-plot(x,tan(x),&#39;-ro&#39;) 
-
-subplot(2,1,1);plot(x,tan(x),&#39;-ro&#39;);
-
-axis([0 pi/2 0 5]); % axis控制坐标轴特征 
-
-subplot(2,1,2);plot(x,tan(x),&#39;-ro&#39;) 
-</code></pre>
-<h2 id="grid"><a href="#grid" class="headerlink" title="grid"></a>grid</h2><pre><code>x=0:0.1*pi:2*pi; 
-
-y=sin(x); 
-
-plot(x,y); 
-
-grid on % 添加网格线 
-</code></pre>
-<h2 id="box与grid"><a href="#box与grid" class="headerlink" title="box与grid"></a>box与grid</h2><pre><code>x=0:0.1*pi:2*pi; 
-
-y=sin(x); 
-
-subplot(2,1,1);plot(x,y);box off % 添加网格线 
-
-subplot(2,1,2);plot(x,y);grid on % 控制坐标轴封闭 
-</code></pre>
-<h2 id="income"><a href="#income" class="headerlink" title="income"></a>income</h2><pre><code>% subplot(m,n,p) 
-
-% subplot(窗口宽,窗口长,第几个窗口创建函数) 
-
-income=[3.2 4.1 5.0 5.6]; 
-
-outgo=[2.5 4.0 3.35 4.9]; 
-
-% subplot(窗口2,窗口1,第1个窗口创建函数income) 
-
-subplot(2,1,1);plot(income); 
-
-% subplot(窗口2,窗口1,第2个窗口创建函数outgo) 
-
-subplot(2,1,2);plot(outgo);
+<p>//尾号10做59位进制<br>//参考程序：同步复位p117/异步复位p118</p>
+<pre><code>module Cnt59(clr,clk,q,cout);        //异步进位
+input clr,clk;
+output reg [6:0] q;
+output reg cout;
+always @(posedge clk or posedge clr)
+begin
+    if(clr) q=0;
+        else begin
+    if(q==58) q=0;
+        else q=q+1;
+    if(q==0) cout=1;
+        else cout=0;end
+end
+endmodule
 </code></pre>
 
       
@@ -226,7 +179,7 @@ subplot(2,1,2);plot(outgo);
         
   
   <div class="tags">
-    <a href="/tags/%E4%B8%AA%E4%BA%BA/">个人</a>, <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>, <a href="/tags/Matlab/">Matlab</a>
+    <a href="/tags/%E7%A8%8B%E5%BA%8F/">程序</a>, <a href="/tags/%E4%BD%9C%E4%B8%9A/">作业</a>
   </div>
 
       

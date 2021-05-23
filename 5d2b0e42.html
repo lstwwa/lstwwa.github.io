@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>FPGA实验 | 原の站</title>
+  <title>Matlab例子 | 原の站</title>
   <meta name="author" content="原">
   
   <meta name="description" content="1.0">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="FPGA实验"/>
+  <meta property="og:title" content="Matlab例子"/>
   <meta property="og:site_name" content="原の站"/>
 
   
@@ -55,7 +55,7 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article
-id="post-FPGA实验"
+id="post-Matlab例子"
 class="h-entry post"
 >
 
@@ -77,9 +77,9 @@ class="h-entry post"
                        
                        
                        
-        <time class="dt-published" datetime="2021-04-28T16:00:00.000Z">
+        <time class="dt-published" datetime="2021-04-04T16:00:00.000Z">
         
-        <a href="/2021/04/29/FPGA%E5%AE%9E%E9%AA%8C/">2021-04-29
+        <a href="/5d2b0e42.html">2021-04-05
         
         </a></time>
       
@@ -87,7 +87,7 @@ class="h-entry post"
       
       
   
-    <h1 class="p-name title" itemprop="headline name">FPGA实验</h1>
+    <h1 class="p-name title" itemprop="headline name">Matlab例子</h1>
   
 
 
@@ -97,14 +97,292 @@ class="h-entry post"
     
     <div class="e-content entry" itemprop="articleBody">
       
-        <p>FPGA实验报告</p>
+        <h2 id="准备代码"><a href="#准备代码" class="headerlink" title="准备代码"></a>准备代码</h2><pre><code>clc
+
+clear all 
+</code></pre>
 <span id="more"></span>
 
-<h1 id="一位全加器"><a href="#一位全加器" class="headerlink" title="一位全加器"></a>一位全加器</h1><p><a href="/2021/04/29/FPGA%E5%AE%9E%E9%AA%8C/t1.docx">下载实验1文件</a></p>
-<h1 id="多位加法器"><a href="#多位加法器" class="headerlink" title="多位加法器"></a>多位加法器</h1><p><a href="/2021/04/29/FPGA%E5%AE%9E%E9%AA%8C/t2.docx">下载实验2文件</a></p>
-<h1 id="优先编码器的编程设计"><a href="#优先编码器的编程设计" class="headerlink" title="优先编码器的编程设计"></a>优先编码器的编程设计</h1><p><a href="/2021/04/29/FPGA%E5%AE%9E%E9%AA%8C/t3.docx">下载实验3文件</a></p>
-<h1 id="加减法计数器的编程设计"><a href="#加减法计数器的编程设计" class="headerlink" title="加减法计数器的编程设计"></a>加减法计数器的编程设计</h1><p><a href="/2021/04/29/FPGA%E5%AE%9E%E9%AA%8C/t4.docx">下载实验4文件</a></p>
-<h1 id="计时器和倒计时的系统"><a href="#计时器和倒计时的系统" class="headerlink" title="计时器和倒计时的系统"></a>计时器和倒计时的系统</h1><p><a href="/2021/04/29/FPGA%E5%AE%9E%E9%AA%8C/t5.docx">下载实验5文件</a></p>
+<h2 id="周期方波"><a href="#周期方波" class="headerlink" title="周期方波"></a>周期方波</h2><pre><code>T=2;
+
+ A=0.5;
+
+ t=-2*T:0.01:2*T;
+
+ y=A*square(pi*t); 
+
+plot(t,y); 
+
+box off; 
+
+axis((t(1)-0.2*t*(end)+0.2-A-0.1*A+0.1)); 
+</code></pre>
+<h2 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h2><pre><code>t=linspace(-4*pi,4*pi,500); 
+
+y=sinc(t/pi); 
+
+plot(t,y); 
+
+box off; 
+</code></pre>
+<h2 id="卷积矩形函数"><a href="#卷积矩形函数" class="headerlink" title="卷积矩形函数"></a>卷积矩形函数</h2><pre><code>tt1=linspace(-4*pi,4*pi,500); 
+
+tt2=linspace(-4*pi,4*pi,500); 
+
+y1=sinc(tt1/pi); 
+
+y2=sinc(tt2/pi); 
+
+dt = 0.01; 
+
+t1 = 0:dt:2; 
+
+L = length(t1); 
+
+ft = ones(1,L); 
+
+subplot(2,2,1); 
+
+plot(t1,ft); 
+
+axis([0 3 0 1.5]); 
+
+hold on; 
+
+plot([2 2],[0 1]); 
+
+% title(&#39;f(t)&#39;); 
+
+xlabel(&#39;(a)&#39;); 
+
+box off; 
+
+ t2 = 0:
+
+dt:4; 
+
+M = length(t2); 
+
+ht = ones(1,M); 
+
+subplot(2,2,2); 
+
+plot(t2,ht); 
+
+axis([0 5 0 1.5]); 
+
+hold on; 
+
+plot([4 4],[0 1]); 
+
+% title(&#39;h(t)&#39;); 
+
+xlabel(&#39;(b)&#39;); 
+
+box off; 
+
+ y = conv(ft,ht)*dt; 
+
+N = L+M-1; 
+
+t = (0:N-1)*dt; 
+
+subplot(2,1,2); 
+
+plot(t,y); 
+
+% axis( (t(1) - 0.5 * t(end) + 0.50 * max(y) + 0.5) );
+
+ % title(&#39;y(t) = f(t)*h(t),&#39;); 
+
+xlabel(&#39;(c)&#39;); 
+
+box off; 
+
+hold off;
+</code></pre>
+<h2 id="卷积作"><a href="#卷积作" class="headerlink" title="卷积作"></a>卷积作</h2><pre><code>hold on 
+
+num=500; 
+
+dt=0.01; 
+
+t1=linspace(-4*pi,4*pi,num); 
+
+L1=length(t1);
+
+t2=linspace(-4*pi,4*pi,num); 
+
+L2=length(t2); 
+
+ y1=sinc(t1/pi); 
+
+y2=sinc(t2/pi); 
+
+subplot(2,2,1); 
+
+plot(t1,y1); 
+
+legend(&#39;y1&#39;); 
+
+ title(&#39;sinc&#39;); 
+
+xlabel(&#39;(a)&#39;); 
+
+subplot(2,2,2); 
+
+plot(t2,y2); 
+
+legend(&#39;y2&#39;); 
+
+ title(&#39;sinc&#39;); 
+
+xlabel(&#39;(b)&#39;); 
+
+ y=conv(y1,y2)*dt; 
+
+ n=L1+L2-1; 
+
+t=(0:n-1)*dt; 
+
+subplot(2,1,2); 
+
+plot(t,y); 
+
+legend(&#39;y&#39;); 
+
+hold off 
+</code></pre>
+<h2 id="单位冲击响应，阶跃响应"><a href="#单位冲击响应，阶跃响应" class="headerlink" title="单位冲击响应，阶跃响应"></a>单位冲击响应，阶跃响应</h2><pre><code>num=1;
+
+den=[1 3 2];
+
+sys=tf(num,den);
+
+t=0:0.01:6;
+
+ht=impulse(sys,t);
+
+gt=step(sys,t);
+
+ha=exp(-t)-exp(-2*t);
+
+ga=0.05-exp(-t)+0.5*exp(-2*t);
+
+subplot(211);
+
+plot(t,ht,&#39; -&#39;,t,ha,&#39; -.&#39;);
+
+box off;
+
+xlabel(&#39;(a)-冲击响应&#39;);
+
+subplot(212);
+
+plot(t,gt,&#39; -&#39;,t,ga,&#39; -.&#39;);
+
+xlabel(&#39;(b)-阶跃响应&#39;);
+
+box off;
+</code></pre>
+<h2 id="零状态响应"><a href="#零状态响应" class="headerlink" title="零状态响应"></a>零状态响应</h2><pre><code>sys=tf(1,[1 3 2]);
+
+t=0:0.01:6;
+
+f=ones(1,length(t));
+
+y=lsim(sys,f,t);
+
+gt=step(sys,t);
+
+plot(t,y,&#39; -&#39;,t,gt,&#39; -.&#39;);
+
+xlabel(&#39;t&#39;);
+
+ylabel(&#39;y(t)&#39;);
+
+box off; title(&#39;零状态响应&#39;);
+</code></pre>
+<h2 id="卷积"><a href="#卷积" class="headerlink" title="卷积"></a>卷积</h2><pre><code>num=1;
+
+den=[1 2^0.5 1];
+
+sys=tf(num,den);
+
+t=0:0.01:2;
+
+f=ones(1,length(t)); %冲击响应 
+
+ht=impulse(sys,t); 
+
+subplot(221); 
+
+plot(t,ht,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(a)-冲击响应&#39;); 
+
+%阶跃响应 
+
+gt=step(sys,t); 
+
+subplot(222); 
+
+plot(t,gt,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(b)-阶跃响应&#39;); 
+
+ %零状态响应 
+
+yl=lsim(sys,f,t); 
+
+subplot(223); 
+
+plot(t,yl,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(c)-零状态响应&#39;); 
+
+ %卷积 
+
+dt=0.01; 
+
+L1=length(t); 
+
+L2=length(t); 
+
+yc=conv(ht,gt)*dt; 
+
+ n=L1+L2-1; 
+
+t=(0:n-1)*dt; 
+
+subplot(224); 
+
+plot(t,yc,&#39; -&#39;); 
+
+axis([0 2 0 0.8]) ;
+
+box off; 
+
+xlabel(&#39;(d)-卷积（规定xy范围）&#39;); 
+
+% plot(t,yc,&#39; -&#39;); 
+
+% box off; 
+
+% xlabel(&#39;(e)-卷积（不规定xy范围）&#39;);
+</code></pre>
 
       
     </div>
@@ -119,7 +397,7 @@ class="h-entry post"
         
   
   <div class="tags">
-    <a href="/tags/FPGA%E5%AE%9E%E9%AA%8C/">FPGA实验</a>
+    <a href="/tags/%E4%B8%AA%E4%BA%BA/">个人</a>, <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>, <a href="/tags/Matlab/">Matlab</a>
   </div>
 
       

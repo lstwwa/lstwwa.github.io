@@ -173,6 +173,283 @@ class="h-entry post"
 </ul>
 <hr>
 <hr>
+<p>第一章<br>EDA技术就是依靠功能强大的电子计算机，在EDA软件工具平台上，对以硬件描述语言HDL（Hardware Description Language）为系统逻辑描述手段完成的设计文件，自动地完成逻辑编译、化简、分割、综合、优化、仿真，直至下载到可编程逻辑器件CPLD/FPGA或专用集成电路ASIC（Application Specific Integrated Circuit）芯片中，实现既定的电子电路设计功能。<br>EDA技术的发展分为CAD、CAE和EDA三个阶段。<br>EDA设计流程</p>
+<p>设计输入形式：图形、文本、波形。</p>
+<p>设计处理主要包括设计编译和检查、设计优化和综合、适配和分割、布局和布线、生成编程数据文件等过程。</p>
+<p>设计输入完成之后，立即进行编译。在编译首先进行语法检验，然后进行设计规则检验，检查总的设计有无超出器件资源或规定的限制并将编译报告列出，指明违反规则和潜在不可靠电路的情况以供设计者纠正 。</p>
+<p>设计优化主要包括面积优化和速度优化。</p>
+<p>在适配和分割过程，确定优化以后的逻辑能否与CPLD或FPGA中的宏单元和I/O单元适配，然后将设计分割为多个逻辑小块形式映射到器件相应的宏单元中。</p>
+<p>布局和布线工作是在设计检验通过以后由软件自动完成的，它能以最优的方式对逻辑元件布局，并准确地实现元件间的布线互连。</p>
+<p>设计处理的最后一步是产生可供器件编程使用的数据文件。FPGA是生成位流数据文件(Bit-stream Generation ，简称BG文件)。</p>
+<p>设计校验过程包括功能仿真和时序仿真。</p>
+<p>器件编程需要满足一定的条件，如编程电压、编程时序和编程算法等。在系统的可编程器件（ISP-PLD）则不需要专门的编程器，只要一根与计算机互连的下载编程电缆就可以了。</p>
+<p>VHDL的特点<br>1、VHDL具有强大的功能，覆盖面广，描述能力强。<br>2、VHDL有良好的可读性。它可以被计算机接受，也容易被读者理解。<br>3、VHDL具有良好的可移植性。<br>4、使用VHDL可以延长设计的生命周期。<br>5、VHDL支持对大规模设计的分解和已有设计的再利用。<br>6、VHDL有利于保护知识产权。</p>
+<p>Verilog HDL可以用来进行各种层次的逻辑设计，也可以进行数字系统的逻辑综合、仿真验证和时序分析。Verilog HDL适合算法级、寄存器传输级、逻辑级、门级和版图级等各个层次的电路设计和描述。<br>Verilog HDL最大优点是设计与工艺无关性，只需要根据系统设计的要求施加不同的约束条件，即可设计出实际电路。</p>
+<p>AHDL是一种模块化的硬件描述语言，它完全集成于Altera公司的MAX+plusII的软件开发系统中。</p>
+<p>可编程逻辑器件（PLD）是一种半定制集成电路，在其内部集成了大量的门和触发器等基本逻辑单元电路，用户通过编程来改变PLD内部电路的逻辑关系或连线，就可以得到所需要的设计电路。</p>
+<p>采用PLD进行的数字系统设计，是基于芯片的设计或称之为“自底向上”的设计，硬件描述语言产生了目前最常用且称为“自顶向下”的设计法。</p>
+<p>EDA工具大致可以分为设计输入编辑器、仿真器、HDL综合器、适配器（或布局布线器）以及下载器等5个模块。</p>
+<p>第二章<br>Quartus Ⅱ13.0的主界面包括菜单与工具栏、主窗口、工程引导窗口、任务窗口、信息窗口。<br>使用图形编辑输入法设计电路的操作流程包括编辑（设计输入）、编译、仿真和编程下载等基本过程。生成的图形文件的扩展名为.bdf。</p>
+<p>用Quartus II 13.0自带大学计划仿真工具（university program vwf）仿真，需要经过建立波形文件、输入信号节点、设置波形参量、编辑输入信号、波形文件存盘、运行仿真器和分析仿真波形等过程。</p>
+<p>仿真操作步骤；<br>①仿真开始前的准备<br>②创建输入波形<br>③运行仿真</p>
+<p>Quartus II 的宏功能模块包括LPM、MegaCore（例如FFT、FIR等）和AMPP。</p>
+<p>Quartus Ⅱ的嵌入式逻辑分析仪SignalTapⅡ是一种高效的硬件测试手段，它可以随设计文件一并下载到目标芯片中，捕捉目标芯片内部系统信号节点处的信息或总线上的数据流，而又不影响原硬件系统的正常工作。在实际监测中，SignalTapⅡ将测得的样本信号暂存于目标芯片的嵌入式RAM中，然后通过器件的JTAG端口将采到的信息传出，送到计算机进行显示和分析。嵌入式逻辑分析仪SignalTapⅡ的设置分为打开SignalTapⅡ编辑窗口、调入节点信号、SignalTapⅡ参数设置、文件存盘、编译、下载和运行分析等操作过程。</p>
+<p>第四、七章<br>Verilog HDL的语句包括赋值语句、条件语句、循环语句、结构说明语句和编译预处理语句等类型，每一类语句又包括几种不同的语句。在这些语句中，有些语句属于顺序执行语句，有些语句属于并行执行语句。 </p>
+<p>用assign语句建模<br>assign语句一般适合对组合逻辑进行赋值，称为连续赋值方式。<br>1位全加器<br>module adder1(sum,cout,a,b,cin);<br>input         a,b,cin;<br>output     sum,cout;<br>assign     {cout,sum} = a+b+cin;<br>endmodule</p>
+<p>用元件例化（instantiate）方式建模<br>3输入端与门:    and    myand3(y,a,b,c);</p>
+<p>用always块语句建模<br>always块语句可以产生各种逻辑，常用于时序逻辑的功能描述。一个程序设计模块中，可以包含一个或多个always语句。程序运行中，在某种条件满足时，就重复执行一遍always结构中的语句。</p>
+<p>用initial块语句建模<br>initial块语句预always语句类似，不过在程序中它只执行1次就结束了。 </p>
+<p>Verilog HDL程序设计模块的基本结构小结：<br>① Verilog HDL程序是由模块构成的。每个模块的内容都是嵌在module和endmodule两语句之间，每个模块实现特定的功能，模块是可以进行层次嵌套的。<br>② 每个模块首先要进行端口定义，并说明输入（input）、输出（output）或双向（inout），然后对模块的功能进行逻辑描述。<br>③ Verilog HDL程序的书写格式自由，一行可以一条或多条语句，一条语句也可以分为多行写。<br>④ 除了end或含end（如endmodule）语句外，每条语句后必须要有分号“；”。<br>⑤ 可以用/<em>……</em>/或//……对Verilog HDL程序的任何部分作注释。一个完整的源程序都应当加上需要的注释，以加强程序的可读性。</p>
+<p>Verilog HDL的空白符包括空格、tab符号、换行和换页。空白符如果不是出现在字符串中，编译源程序时将被忽略。</p>
+<p>位宽表示数字对应的二进制数的位数宽度；进制符号包括b或B（表示二进制数），d或D（表示十进制数），h或H（表示十六进制数），o或O（表示八进制数）。<br>例如<br>8’b10110001  //表示位宽为8位的二进制数<br>8’hf5          //表示位宽为8位的十六进制数</p>
+<p>关键字是Verilog HDL预先定义的单词，它们在程序中有不同的使用目的。例如，module和endmodule来指出源程序模块的开始和结束；用assign来描述一个逻辑表达式等。</p>
+<p>定义标识符时应遵循如下规则<br>① 首字符不能是数字。<br>② 字符数不能多于1024个。<br>③ 大小写字母是不同的。<br>④ 不要与关键字同名。</p>
+<p>常用的算术操作符：<br>+（加）、-（减）、*（乘）、/（除）、%（求余）、**（乘方）。<br>逻辑操作符包括：<br>&amp;&amp;（逻辑与）、||（逻辑或）、！（逻辑非）<br>位运算操作符包括：<del>（按位取反）、&amp;（按位与）、|（按位或）、^（按位异或）、^</del>或<del>^（按位同或）。<br>关系操作符有：<br> &lt;（小于）、&lt;=（小于等于）、&gt;（大于）、&gt;=（大于等于）。<br>其中，&lt;=也是赋值运算的赋值符号。<br>等值操作符包括：<br>==（等于）、！=（不等于）、===（全等）、<br>！==（不全等）4种。<br>缩减操作符包括：<br>&amp;（与）、</del>&amp;（与非）、|（或）、<del>|（或非）、<br>^（异或）、^</del>或~^（同或）。<br>转移操作符包括：</p>
+<blockquote>
+<blockquote>
+<p>（右移）、&lt;&lt;（左移）<br>条件操作符为：？：<br>并接操作符为：｛｝<br>并接操作符的使用格式为<br>｛操作数1,操作数2,…,操作数n｝；</p>
+</blockquote>
+</blockquote>
+<p>变量分为网络型（nets type）和寄存器型（register type）两种。<br>网络型变量是输出值始终根据输入变化而更新的变量，它一般用来定义硬件电路中的各种物理连线。<br>寄存器型变量是一种数值容器，不仅可以容纳当前值，也可以保持历史值，这一属性与触发器或寄存器的记忆功能有很好的对应关系。<br>reg型变量定义的关键字是reg，定义格式如下<br>reg [位宽]     变量1,变量2,…,变量n;</p>
+<p>门级描述<br>用于门级描述关键字包括：not（非门）、and（与门）、nand（与非门）、or（或门）、nor（或非门）、xor（异或门）、xnor（异或非门）、buf（缓冲器）以及bufif1、bufif0、notif1、notif0等各种三态门。<br>nand nand2(y,a,b);        //2输入端与非门<br>xor myxor(y,a,b);        //异或门<br>bufif0 mybuf(y,a,en);    //低电平使能的三态缓冲器 </p>
+<p>Verilog HDL的行为级描述是最能体现EDA风格的硬件描述方式，它既可以描述简单的逻辑门，也可以描述复杂的数字系统乃至微处理器；既可以描述组合逻辑电路，也可以描述时序逻辑电路。</p>
+<p>8线3线译码器</p>
+<pre><code>module    example_4_6(y,a);
+input[7:0]    a;
+output[2:0]    y;
+reg[2:0]    y;
+always    @(a)
+    begin
+        if(~a[7])        y=&#39;b111;
+          else if(~a[6])    y=&#39;b110;
+else if(~a[5])    y=&#39;b101;
+        else if(~a[4])    y=&#39;b100;
+        else if(~a[3])    y=&#39;b011;
+        else if(~a[2])    y=&#39;b010;
+        else if(~a[1])    y=&#39;b001;
+        else         y=&#39;b000;
+    end
+endmodule
+</code></pre>
+<p>4选1数据选择器</p>
+<pre><code>module    example_4_7(z,a,b,c,d,s1,s2);
+input        s1,s2;
+input        a,b,c,d;
+output        z;
+reg        z;
+always    @(s1 or s2)
+  begin
+    case (&#123;s1,s2&#125;)
+     &#39;b00:    z=a;    &#39;b01:    z=b;    
+    &#39;b10:    z=c;    &#39;b11:    z=d;
+            endcase
+  end
+endmodule    
+</code></pre>
+<p>8位奇偶校验器</p>
+<pre><code>module    example_4_8(a,out);
+input[7:0]    a;
+output        out;
+reg        out;
+integer        n;
+always    @(a)
+  begin
+   out = 0;
+   for (n = 0; n &lt; 8; n = n + 1) out =out ^ a[n];
+  end
+endmodul
+</code></pre>
+<p>8D锁存器</p>
+<pre><code>module    example_4_13(d,q,en);
+input            en;
+input[7:0]        d;
+output[7:0]        q;
+reg[7:0]        q;
+always     @(en or d)
+  begin
+    if (en)    q = 8&#39;bzzzzzzzz;
+      else            q=d;
+  end
+endmodule
+</code></pre>
+<p>三态输出8D锁存器</p>
+<pre><code>module latch8v(clk,clr,ena,oe,q,d);
+  input [7:0]     d;
+  input         clk,clr,ena,oe;
+  output [7:0]     q;
+  reg  [7:0]         q,q_temp;
+always @(posedge clk)
+    begin
+    if (~clr)    q_temp = 0;
+    else if (ena)    q_temp = d;
+    else           q_temp = q;
+        if (oe) q = 8&#39;bzzzzzzzz;     else  q = q_temp;
+        end
+endmodule 
+</code></pre>
+<p>4位加法计数器</p>
+<pre><code>module cnt4e(clk,clr,ena,cout,q);
+       input         clk,clr,ena;
+       output [3:0]     q;
+    output    cout;
+      reg  [3:0]     q;
+always @(posedge clr or posedge clk)
+    begin
+         if (clr)    q = &#39;b0000;
+            else if (ena)    q = q+1;
+            end
+      assign cout = &amp;q;
+endmodule 
+</code></pre>
+<p>100进制加减法计数器</p>
+<pre><code>module cnt100(clk,clrn,j,q,cout,sel,en);
+input clk,clrn,j,sel,en;
+output reg [7:0]  q;
+output reg cout;
+always @(posedge clk^j or negedge clrn)
+  begin 
+   if (~clrn) q=0;
+    else  if(en) begin
+   if (sel) begin  
+        if (q==&#39;h99) q=0;
+         else q=q+1;
+       if  (q[3:0]==&#39;ha) begin
+        q[3:0]=0;  q[7:4]=q[7:4]+1; end
+       if (q==&#39;h99) cout=1;
+      else cout=0; end
+      end
+else begin
+       if (q==0)q=&#39;h99;
+         else q=q-1;
+       if  (q[3:0]==&#39;hf) q[3:0]=9;
+       if (q==0) cout=1;
+      else cout=0; 
+      end
+    end  
+endmodule
+</code></pre>
+<p>8位二进制加减计数器</p>
+<pre><code>module pdowncnt8(q,cout,d,load,ena,clk,clr,updown);
+  input [7:0]     d;
+  input             load,ena,clk,clr,updown;
+  output [7:0]     q;
+  output         cout;
+  reg  [7:0]     q;
+always @(posedge clk)
+    begin
+        if (~clr)    q = &#39;b00000000;
+            else if (load)    q = d;    
+else if (ena)
+        if (~updown) q = q+1;
+         else    q = q-1;    
+        end
+  assign cout = (~updown) ? &amp;q:|q;
+endmodule 
+</code></pre>
+<p>8位乘法器</p>
+<pre><code>module mul8v (a,b,q);
+    input[7:0]        a,b;
+       output[15:0]     q;
+    assign q = a * b;
+   endmodule 
+</code></pre>
+<p>3线-8线译码器：</p>
+<pre><code>module    decoder(a,b,c,ena,y);
+input        a,b,c,ena;
+output[7:0]    y;
+reg[7:0]    y;
+always    
+    begin
+        if (ena==1)  y = &#39;b11111111;
+          else
+            case (&#123;c,b,a&#125;) 
+            &#39;b000: y= &#39;b11111110;
+            &#39;b001: y= &#39;b1111110；
+&#39;b010: y= &#39;b11111011;
+            &#39;b011: y= &#39;b11110111;
+            &#39;b100: y= &#39;b11101111;
+            &#39;b101: y= &#39;b11011111;
+            &#39;b110: y= &#39;b10111111;
+            &#39;b111: y= &#39;b01111111;
+             default : y= &#39;b11111111;
+            endcase
+    end
+endmodule 
+</code></pre>
+<p>8位二进制数据比较器</p>
+<pre><code>module    comp8v(a,b,fa,fb,fe);
+input[7:0]        a,b;
+output        fa,fb,fe;
+reg[7:0]        fa,fb,fe;
+always    
+  begin
+    if (a &gt; b)  begin  fa = 1;  fb = 0;  fe = 0;   end    
+    else if (a &lt; b)  begin fa = 0; fb = 1; fe = 0;  end
+    else if (a == b)  begin  fa = 0;  fb = 0;  fe = 1;  end
+  end
+endmodule     
+</code></pre>
+<p>8×8位ROM</p>
+<pre><code>module from_rom(addr,ena,q);
+       input     [2:0]     addr;
+    input             ena;
+       output     [7:0]     q;
+    reg      [7:0]     q;
+always @(ena or addr)
+    begin
+    if (ena)    q = &#39;bzzzzzzzz;else
+        case (addr)
+           0:    q = &#39;b01000001;
+        1:    q = &#39;b01000010;    
+2:    q = &#39;b01000011;
+        3:    q = &#39;b01000100;
+        4:    q = &#39;b01000101;
+        5:    q = &#39;b01000110;
+        6:    q = &#39;b01000111;
+        7:    q = &#39;b01001000;
+             default :    q = &#39;bzzzzzzzz;
+           endcase
+    end
+endmodule 
+</code></pre>
+<p>JK触发器</p>
+<pre><code>module myjkff(j,k,clr,clk,q,qn);
+       input         j,k,clr,clk;
+    output     q,qn;
+      reg           q,qn;
+always @(negedge clr or negedge clk)
+   begin
+    if (~clr)    begin q = 0;    qn = 1; end
+    else         
+         case (&#123;j,k&#125;)
+        &#39;b00: begin q = q;    qn = qn; end
+        &#39;b01: begin q = 0;   qn = 1; end    
+&#39;b10: begin q = 1;   qn = 0; end
+        &#39;b11: begin q = ~q; qn = ~qn; end
+        default begin q = 0;  qn = 1;end
+        endcase
+        end
+endmodule 
+</code></pre>
+<p>8位双向移位寄存器</p>
+<pre><code>module rlshift8(q,d,lod,clk,clr,s,dir,dil);
+  input [7:0]     d;
+  input         lod,clk,clr,s,dir,dil;
+  output [7:0]     q;
+  reg  [7:0]     q;
+always @(posedge clk)
+    begin
+    if (~clr)    q = &#39;b00000000;
+      else if (lod)    q = d;
+         else if (s) begin
+                q = q &gt;&gt; 1;        --实现右移操作
+            q[7] = dir; end    
+else  begin
+         q = q &lt;&lt; 1;        --实现左移操作
+        q[0] = dil; end
+          end
+endmodule 
+</code></pre>
 
       
     </div>
@@ -204,9 +481,11 @@ class="h-entry post"
   <h3 class="title">记录</h3>
   <ul class="entry">
        
-      <li>页码更新了</li>
+      <li>提交申请 1.5</li>
     
-      <li>提交申请 1.4</li>
+      <li>所有链接采用了新的算法导致下载全部炸了，过段时间修</li>
+    
+      <li>eda复习资料24号抽空写格式</li>
     
   </ul>
 </div>
@@ -229,712 +508,6 @@ class="h-entry post"
       <li><a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">学信网</a></li>
     
       <li><a target="_blank" rel="noopener" href="https://cy.ncss.cn/">全国大学生创业服务网</a></li>
-    
-  </ul>
-</div>
-
-
-
-  
-<div class="widget tag">
-  <h3 class="title">poetry</h3>
-  <ul class="entry">
-       
-      <li>W</li>
-    
-      <li>i</li>
-    
-      <li>l</li>
-    
-      <li>l</li>
-    
-      <li>i</li>
-    
-      <li>a</li>
-    
-      <li>m</li>
-    
-      <li> </li>
-    
-      <li>B</li>
-    
-      <li>l</li>
-    
-      <li>a</li>
-    
-      <li>k</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>-</li>
-    
-      <li> </li>
-    
-      <li>L</li>
-    
-      <li>o</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>‘</li>
-    
-      <li>s</li>
-    
-      <li> </li>
-    
-      <li>S</li>
-    
-      <li>e</li>
-    
-      <li>c</li>
-    
-      <li>r</li>
-    
-      <li>e</li>
-    
-      <li>t</li>
-    
-      <li> </li>
-    
-      <li>N</li>
-    
-      <li>e</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>s</li>
-    
-      <li>e</li>
-    
-      <li>e</li>
-    
-      <li>k</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>o</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>e</li>
-    
-      <li>l</li>
-    
-      <li>l</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>h</li>
-    
-      <li>y</li>
-    
-      <li> </li>
-    
-      <li>l</li>
-    
-      <li>o</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>L</li>
-    
-      <li>o</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>h</li>
-    
-      <li>a</li>
-    
-      <li>t</li>
-    
-      <li> </li>
-    
-      <li>n</li>
-    
-      <li>e</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>o</li>
-    
-      <li>l</li>
-    
-      <li>d</li>
-    
-      <li> </li>
-    
-      <li>c</li>
-    
-      <li>a</li>
-    
-      <li>n</li>
-    
-      <li> </li>
-    
-      <li>b</li>
-    
-      <li>e</li>
-    
-      <li>;</li>
-    
-      <li> </li>
-    
-      <li>F</li>
-    
-      <li>o</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>h</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>g</li>
-    
-      <li>e</li>
-    
-      <li>n</li>
-    
-      <li>t</li>
-    
-      <li>l</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>w</li>
-    
-      <li>i</li>
-    
-      <li>n</li>
-    
-      <li>d</li>
-    
-      <li> </li>
-    
-      <li>d</li>
-    
-      <li>o</li>
-    
-      <li>t</li>
-    
-      <li>h</li>
-    
-      <li> </li>
-    
-      <li>m</li>
-    
-      <li>o</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>S</li>
-    
-      <li>i</li>
-    
-      <li>l</li>
-    
-      <li>e</li>
-    
-      <li>n</li>
-    
-      <li>t</li>
-    
-      <li>l</li>
-    
-      <li>y</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>i</li>
-    
-      <li>n</li>
-    
-      <li>v</li>
-    
-      <li>i</li>
-    
-      <li>s</li>
-    
-      <li>i</li>
-    
-      <li>b</li>
-    
-      <li>l</li>
-    
-      <li>y</li>
-    
-      <li>.</li>
-    
-      <li> </li>
-    
-      <li>I</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>o</li>
-    
-      <li>l</li>
-    
-      <li>d</li>
-    
-      <li> </li>
-    
-      <li>m</li>
-    
-      <li>y</li>
-    
-      <li> </li>
-    
-      <li>l</li>
-    
-      <li>o</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>I</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>o</li>
-    
-      <li>l</li>
-    
-      <li>d</li>
-    
-      <li> </li>
-    
-      <li>m</li>
-    
-      <li>y</li>
-    
-      <li> </li>
-    
-      <li>l</li>
-    
-      <li>o</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>I</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>o</li>
-    
-      <li>l</li>
-    
-      <li>d</li>
-    
-      <li> </li>
-    
-      <li>h</li>
-    
-      <li>e</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>a</li>
-    
-      <li>l</li>
-    
-      <li>l</li>
-    
-      <li> </li>
-    
-      <li>m</li>
-    
-      <li>y</li>
-    
-      <li> </li>
-    
-      <li>h</li>
-    
-      <li>e</li>
-    
-      <li>a</li>
-    
-      <li>r</li>
-    
-      <li>t</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>T</li>
-    
-      <li>r</li>
-    
-      <li>e</li>
-    
-      <li>m</li>
-    
-      <li>b</li>
-    
-      <li>l</li>
-    
-      <li>i</li>
-    
-      <li>n</li>
-    
-      <li>g</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>c</li>
-    
-      <li>o</li>
-    
-      <li>l</li>
-    
-      <li>d</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>i</li>
-    
-      <li>n</li>
-    
-      <li> </li>
-    
-      <li>g</li>
-    
-      <li>h</li>
-    
-      <li>a</li>
-    
-      <li>s</li>
-    
-      <li>t</li>
-    
-      <li>l</li>
-    
-      <li>y</li>
-    
-      <li> </li>
-    
-      <li>f</li>
-    
-      <li>e</li>
-    
-      <li>a</li>
-    
-      <li>r</li>
-    
-      <li>s</li>
-    
-      <li>.</li>
-    
-      <li> </li>
-    
-      <li>A</li>
-    
-      <li>h</li>
-    
-      <li> </li>
-    
-      <li>s</li>
-    
-      <li>h</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>d</li>
-    
-      <li>i</li>
-    
-      <li>d</li>
-    
-      <li> </li>
-    
-      <li>d</li>
-    
-      <li>e</li>
-    
-      <li>p</li>
-    
-      <li>a</li>
-    
-      <li>r</li>
-    
-      <li>t</li>
-    
-      <li> </li>
-    
-      <li>S</li>
-    
-      <li>o</li>
-    
-      <li>o</li>
-    
-      <li>n</li>
-    
-      <li> </li>
-    
-      <li>a</li>
-    
-      <li>f</li>
-    
-      <li>t</li>
-    
-      <li>e</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>s</li>
-    
-      <li>h</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>w</li>
-    
-      <li>a</li>
-    
-      <li>s</li>
-    
-      <li> </li>
-    
-      <li>g</li>
-    
-      <li>o</li>
-    
-      <li>n</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>f</li>
-    
-      <li>r</li>
-    
-      <li>o</li>
-    
-      <li>m</li>
-    
-      <li> </li>
-    
-      <li>m</li>
-    
-      <li>e</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>A</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>r</li>
-    
-      <li>a</li>
-    
-      <li>v</li>
-    
-      <li>e</li>
-    
-      <li>l</li>
-    
-      <li>l</li>
-    
-      <li>e</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>c</li>
-    
-      <li>a</li>
-    
-      <li>m</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>b</li>
-    
-      <li>y</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>S</li>
-    
-      <li>i</li>
-    
-      <li>l</li>
-    
-      <li>e</li>
-    
-      <li>n</li>
-    
-      <li>t</li>
-    
-      <li>l</li>
-    
-      <li>y</li>
-    
-      <li>,</li>
-    
-      <li> </li>
-    
-      <li>i</li>
-    
-      <li>n</li>
-    
-      <li>v</li>
-    
-      <li>i</li>
-    
-      <li>s</li>
-    
-      <li>i</li>
-    
-      <li>b</li>
-    
-      <li>l</li>
-    
-      <li>y</li>
-    
-      <li>：</li>
-    
-      <li> </li>
-    
-      <li>H</li>
-    
-      <li>e</li>
-    
-      <li> </li>
-    
-      <li>t</li>
-    
-      <li>o</li>
-    
-      <li>o</li>
-    
-      <li>k</li>
-    
-      <li> </li>
-    
-      <li>h</li>
-    
-      <li>e</li>
-    
-      <li>r</li>
-    
-      <li> </li>
-    
-      <li>w</li>
-    
-      <li>i</li>
-    
-      <li>t</li>
-    
-      <li>h</li>
-    
-      <li> </li>
-    
-      <li>a</li>
-    
-      <li> </li>
-    
-      <li>s</li>
-    
-      <li>i</li>
-    
-      <li>g</li>
-    
-      <li>h</li>
-    
-      <li>.</li>
     
   </ul>
 </div>

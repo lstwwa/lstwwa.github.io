@@ -309,7 +309,6 @@ article .entry table {
   width: 100%;
 }
 article .entry table th {
-  white-space: nowrap;
   color: #444;
   font-weight: 600;
   background: #eee;

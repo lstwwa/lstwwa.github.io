@@ -137,6 +137,7 @@ a:hover {
   margin-right: 20px;
 }
 article {
+  word-break: break-all;
   border-radius: 15px;
   -webkit-box-shadow: 0px 0px 0px #ddd;
   box-shadow: 0px 0px 0px #ddd;
@@ -315,6 +316,7 @@ article .entry table th {
 }
 article .entry table td,
 article .entry table th {
+  word-break: break-all;
   font: 0.9em "Helvetica Neue", "Helvetica", Arial, sans-serif;
   border: 1px solid #e2e2e2;
   padding: 8px 16px;

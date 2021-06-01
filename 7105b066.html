@@ -1,0 +1,633 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>EDA(FPGA)技术复习资料2 | 原の站</title>
+  <meta name="author" content="原">
+  
+  <meta name="description" content="1.0">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="EDA(FPGA)技术复习资料2"/>
+  <meta property="og:site_name" content="原の站"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+<body>
+  <header id="header" class="inner"><div class="aligncenter">
+  <nav id="main-nav" class="aligncenter">
+  <h1><a href="/">原の站</a></h1>
+  <h2><a href="/">Let‘s Show Then Who We Are</a></h2>
+
+
+<nav id="main-nav" class="aligncenter">
+<!-- 修改副标题居中 -->
+  <ul>
+    
+      <li><a href="/tools">工具</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article
+id="post-2021-06/EDA(FPGA)技术复习资料2"
+class="h-entry post"
+>
+
+
+
+ 
+  <div class="post-content">
+    
+    <header>
+      
+             
+              
+              
+              
+              <!--    显示图标
+        <div class="icon"></div>
+                       -->
+                       
+                       
+                       
+                       
+        <time class="dt-published" datetime="2021-05-31T16:00:00.000Z">
+        
+        <a href="/7105b066.html">2021-06-01
+        
+        </a></time>
+      
+      
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">EDA(FPGA)技术复习资料2</h1>
+  
+
+
+    </header>
+    
+    
+    
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <p>说明此篇文章</p>
+<span id="more"></span> 
+
+<p>EDA(FPGA)技术复习资料</p>
+<h1 id="一、填空"><a href="#一、填空" class="headerlink" title="一、填空"></a>一、填空</h1><ul>
+<li><p>1、EDA设计流程包括 <u><strong>设计准备 设计输入 设计处理 器件编程序</strong>*</u> 四个步骤</p>
+</li>
+<li><p>2、EDA的设计验证包括 <u><strong>功能仿真 时序仿真 器件测试</strong></u> 三个过程 </p>
+</li>
+<li><p>3、EDA的设计输入主要包括 <u><strong>文本输入方式 图形输入方式 波形输入方式</strong></u></p>
+</li>
+<li><p>4、文本输入是指采用 <u><strong>硬件描述语言</strong></u>进行电路设计的方式。  </p>
+</li>
+<li><p>5、功能仿真实在设计输入完成以后，选择具体器件进行编译之前进行的逻辑功能验证，因此又称为 <u><strong>前仿真</strong></u></p>
+</li>
+<li><p>6、时序仿真实在选择了具体器件并完成布局、布线之后进行的时序关系仿真，因此又被称为 <u><strong>后仿真</strong></u>或 <u><strong>延时仿真</strong></u></p>
+</li>
+<li><p>7、当前最流行的并成为IEEE标准的硬件描述语言包括 <u><strong>VHDL</strong></u>和 <u><strong>VERILOG HDL</strong></u></p>
+</li>
+<li><p>8、EDA工具大致分为 <u><strong>设计输入编辑器、仿真器、HDL综合器、适配器（或布局布线器、下载器</strong></u>等五个模块。  </p>
+</li>
+<li><p>9、IEEE于1987年将VHDL采纳为 <u><strong>IEEE#1076</strong></u> 标准。  </p>
+</li>
+<li><p>10、用VHDL语言书写的源文件。即是 <u><strong>程序</strong></u> 又是 <u><strong>文档</strong></u> ，即是工程技术人员之间交换信息的文件，又可作为合同签约者之间的文件。  </p>
+</li>
+<li><p>11、用VHDL设计的电路，既可以被高层次的系统调用，成为系统的一部分，也可以作为一个电路的功能快 <u><strong>独立存在</strong></u> 和 <u><strong>独立运行</strong></u></p>
+</li>
+<li><p>12、VDHL设计实体的基本结构由 <u><strong>库、程序包、实体、结构体、配臵</strong></u> 等部分构成。  </p>
+</li>
+<li><p>13、<u><strong>实体</strong></u> 和 <u><strong>结构体</strong></u> 是设计实体的基本组成部分，它们可以构成最基本的VHDL程序。 </p>
+</li>
+<li><p>14、根据VHDL语法规则，在程序中使用的文字、数据对象、数据类型都需要 <u><strong>预先定义</strong></u></p>
+</li>
+<li><p>15、VHDL的实体由 <u><strong>实体声明部分</strong></u> 和 <u><strong>结构体</strong></u> 组成。  </p>
+</li>
+<li><p>16、VHDL的实体声明部分制订了设计单元的 <u><strong>输入输出端口</strong></u> 或 <u><strong>引脚</strong></u>，它是设计实体对外的一个通信界面，是外界可以看到的部分。  </p>
+</li>
+<li><p>17、VDHL的结构体用来描述设计实体的 <u><strong>逻辑结构</strong></u> 和 <u><strong>逻辑功能</strong></u>，它由VHDL语句构成，是外界看不到的部分。  </p>
+</li>
+<li><p>18、在VHDL的端口声明语句中，端口方向包括 <u><strong>IN、OUT、INOUT 和 BUFFER</strong></u></p>
+</li>
+<li><p>19、VHDL的数据型文字包括 <u><strong>整数文字、实数文字、以数制基数表示的文字、物理量文字</strong></u></p>
+</li>
+<li><p>20、VHDL的字符是以 <u><strong>单引号</strong></u> 括起来的数字、字母和符号。  </p>
+</li>
+<li><p>21、VHDL的标识符必须以 <u><strong>字母开头</strong></u> ，后跟若干字母、数字或单个下划线构成，但最后不能为 <u><strong>下划线</strong></u></p>
+</li>
+<li><p>22、VHDL的数据对象包括 <u><strong>变量、常数、信号</strong></u>，它们是用来存放各种类型数据的容器。 </p>
+</li>
+<li><p>23、VHDL的变量（VARIABLE）是一个 <u><strong>局部量</strong></u> ，只能在进程、函数和过程中声明和使用。 </p>
+</li>
+<li><p>24、VHDL的信号（SIGNAL）是一种数值容器，不仅可以容纳 <u><strong>当前值</strong></u> ，也可以保持 <u><strong>历史值</strong></u></p>
+</li>
+</ul>
+<ul>
+<li><p>25、常数（CONSTANT）是程序中一个 <u><strong>恒定不变</strong></u> 的值，一般在 <u><strong>程序前部</strong></u> 声明。 </p>
+</li>
+<li><p>26、VHDL的数据类型包括 <u><strong>标量型、复合型、存取类型、文件类型</strong></u></p>
+</li>
+<li><p>27、VHDL的标量型（SCALAR TYPE）是单元素的最基本数据类型，包括 <u><strong>实数类型、整数类型、枚举类型、时间类型</strong></u> </p>
+</li>
+<li><p>28、VHDL的操作符包括 <u><strong>逻辑操作符、关系操作符、算术操作符、符号操作符</strong></u> </p>
+</li>
+<li><p>29、在VHDL中，标准逻辑位数据有 <u><strong>九</strong></u> 种逻辑值。  </p>
+</li>
+<li><p>30、在VHDL中，预定义的 <u><strong>属性表示符</strong></u> 可用于检出时钟边沿、完成定时检查、获得未约束的数据类型的范围等。  </p>
+</li>
+<li><p>31、VHDL的基本描述语句包括 <u><strong>顺序语句</strong></u> 和 <u><strong>并行语句</strong></u> </p>
+</li>
+<li><p>32、VHDL的顺序语句只能出现在 <u><strong>进程、过程、函数</strong></u>中，是按程序书写的顺序自上而下、一条一条地执行。  </p>
+</li>
+<li><p>33、VHDL的并行语句在结构体中的执行是 <u><strong>并行运行</strong></u> 的，其执行方式与语句书写的顺序无关。 </p>
+</li>
+<li><p>34、在VHDL的各种并行语句之间，可以用 <u><strong>信号</strong></u> 来交换信息。  </p>
+</li>
+<li><p>35、VDHL的PROCESS（进程）语句是由 <u><strong>顺序语句</strong></u> 组成的，但其本身却是 <u><strong>并行语句</strong></u></p>
+</li>
+<li><p>36、VHDL的并行信号赋值语句的赋值目标必须都是 <u><strong>信号</strong></u></p>
+</li>
+<li><p>37、VHDL的子程序有 <u><strong>过程（PROCEDURE）</strong></u> 和 <u><strong>函数（FUNCTION）</strong></u></p>
+</li>
+<li><p>38、VHDL的过程分为过程首和过程体两部分，调用前需要奖它们装入 <u><strong>程序包（PACKAGE）</strong></u> 中</p>
+</li>
+<li><p>39、VHDL的函数分为 <u><strong>函数首</strong></u> 和 <u><strong>函数体</strong></u> 两部分，调用前需要将它们装入程序包（PACKAGE）中。  </p>
+</li>
+<li><p>40、元件例化是将预先设计好的设计实体作为一个 <u><strong>元件</strong></u>，连接到当前设计实体中一个制定的 <u><strong>端口</strong></u></p>
+</li>
+<li><p>42、在PC上或工作站利用VHDL进行项目设计，不允许在 <u><strong>根目录</strong></u> 下进行，必须在根目录下设计建立一个工程目录（即文件夹）。 </p>
+</li>
+<li><p>43、程序包是用VHDL语言编写的，其源程序也需要以 <u><strong>.VHD</strong></u> 文件类型保存。 </p>
+</li>
+<li><p>44、VDHL的源文件是用EDA工具的文本编辑方式输入的，因此称为 <u><strong>文本输入设计法</strong></u></p>
+</li>
+<li><p>45、QUARTUS II支持多种编辑输入法，包括 <u><strong>图形编辑输入法、文本编辑输入法、符号编辑输入法、波形编辑输入法</strong></u></p>
+</li>
+<li><p>46、用QUARTUS II图形编辑方式生成的图形文件的扩展名为<br><u><strong>.GDF</strong></u> 和 <u><strong>.BDF</strong></u></p>
+</li>
+<li><p>47、MODELSIM是一种快速而方便的 <u><strong>HDL编译型仿真工具</strong></u>，支持VHDL和VERILOG HDL的 <u><strong>编辑、编译、仿真</strong></u></p>
+</li>
+<li><p>48、MODELSIM仿真包括 <u><strong>装载设计文件、设臵激励信号、仿真</strong></u> 等操作过程。 </p>
+</li>
+<li><p>49、MODELSIM是 <u><strong>编译型</strong></u>仿真器，在进行仿真前必须编译所有待仿真的HDL文件成为 <u><strong>仿真库</strong></u>，在编译时获得优化，提高仿真速度。  </p>
+</li>
+<li><p>50、MODELSIM提供了多种指令，既可以 <u><strong>单步</strong></u>，也可以构成 <u><strong>批处理文件</strong></u>，用来控制编辑、编译和仿真流程。  </p>
+</li>
+<li><p>51、利用EDA工具，设计者只需要用 <u><strong>硬件描述语言</strong></u> 来完成对系统功能的描述，然后由计算机软件自动完成设计处理，得到PLD设计结果。 </p>
+</li>
+<li><p>52、采用SRAM结构的可编程器件，在系统断电后编程信息 <u><strong>会丢失</strong></u></p>
+</li>
+<li><p>53、在PLD没有出现之前，数字系统的传统设计往往采用‚积木‛式的方法进行，实质上是对 <u><strong>电路板</strong></u> 进行设计。  </p>
+</li>
+<li><p>54、硬件描述语言HDL给PLD和数字系统的设计带来了更新的设计方法和理念，产生了目前最常用的并称之为 <u><strong>自顶向下（TOP-DOWN）</strong></u> 的设计方法。  </p>
+</li>
+<li><p>55、采用‚自顶向下‛（TOP-DOWN）的设计方法时，描述器件总功能的模块放在最上面，称为 <u><strong>顶层设计</strong></u>，描述器件某一部分功能的模块放在下层，称为 <u><strong>底层设计</strong></u></p>
+</li>
+<li><p>56、在系统可编程技术（ISP）是指对器件、电路板或整个电子系统功能可随时进行 <u><strong>修改</strong></u> 或 <u><strong>重构</strong></u> 的技术。  </p>
+</li>
+<li><p>57、具有类似移位寄存器的链形结构ISP器件的串行编程方式，称为 <u><strong>菊花链结构</strong></u></p>
+</li>
+<li><p>58、边界扫描测试BST是由联合测试活动组织JTAG提出来，主要解决 <u><strong>芯片</strong></u> 的测试问题。 </p>
+</li>
+<li><p>59、标准的边界扫描测试只需要 <u><strong>四</strong></u> 根信号线。  </p>
+</li>
+<li><p>60、目前常见的可编程逻辑器件的编程和配臵工艺包括基于 <u><strong>电可擦存储单元的E2PROM或FLASH技术、基于 SRAM查找表的编程单元、基于反熔丝编程单元</strong></u><br>三种编程工艺。 </p>
+</li>
+</ul>
+<h1 id="二、选择题"><a href="#二、选择题" class="headerlink" title="二、选择题"></a>二、选择题</h1><ul>
+<li><p>1、将设计的系统或电路按照EDA开发软件要求的某种形式表示处理啊，并送入计算机的过程称为（） </p>
+<blockquote>
+<p><u><strong>A、设计输入</strong></u>   B、设计输出   C、仿真   D、综合 </p>
+</blockquote>
+</li>
+<li><p>2、VHDL属于（  ）描述语言。  </p>
+<blockquote>
+<p>A、普通硬件   <u><strong>B、行为</strong></u>   C、高级   D、低级 </p>
+</blockquote>
+</li>
+<li><p>3、在设计输入完成之后，应立即对设计文件进行（  ）  </p>
+<blockquote>
+<p>A、编辑   <u><strong>B、编译</strong></u>   C、功能仿真  D、时序仿真  </p>
+</blockquote>
+</li>
+<li><p>4、在设计处理过程中、可产生供器件编程使用的数据文件，对于CPLD来说是产生（  ）文件  </p>
+<blockquote>
+<p><u><strong>A、熔丝图</strong></u>    B、位流数据    C、图形    D、仿真  </p>
+</blockquote>
+</li>
+<li><p>5、在设计处理过程中、可产生供器件编程使用的数据文件，对于FPGA来说是产生（  ）文件  </p>
+<blockquote>
+<p>A、熔丝图    <u><strong>B、位流数据</strong></u>    C、图形    D、仿真 </p>
+</blockquote>
+</li>
+<li><p>6、在C语言基础上演化而来的硬件描述语言是（  ）  </p>
+<blockquote>
+<p>A、VHDL    <u><strong>B、VERILOG HDL</strong></u>    C、AHDL   D、CUPL  </p>
+</blockquote>
+</li>
+<li><p>7、一个能为VHDL综合器接受，并能作为一个独立的设计单元的完整的VDHL程序称为（  ）  </p>
+<blockquote>
+<p>A、设计输入    B、设计输出    <u><strong>C、设计实体</strong></u>    D、设计结构 </p>
+</blockquote>
+</li>
+<li><p>8、VDHL的设计实体可以被高层次的系统（  ），成为系统的一部分。  </p>
+<blockquote>
+<p>A、输入    B、输出    C、仿真    <u><strong>D、调用</strong></u> </p>
+</blockquote>
+</li>
+<li><p>9、VHDL常用的库是（  ）标准库。      </p>
+<blockquote>
+<p><u><strong>A、IEEE</strong></u>    B、STD    C、WORK    D、PACKAGE </p>
+</blockquote>
+</li>
+<li><p>10、VHDL的实体声明部分用来指定设计单元的（  ）。 </p>
+<blockquote>
+<p>A、输入端口    B、输出端口    C、引脚    <u><strong>D、以上均可</strong></u> </p>
+</blockquote>
+</li>
+<li><p>11、一个实体可以拥有一个或多个（  ）      </p>
+<blockquote>
+<p>A、设计实体    <u><strong>B、结构体</strong></u>    C、输入    D、输出  </p>
+</blockquote>
+</li>
+<li><p>12、在VHDL的端口声明语句中，用（  ）声明端口为具有读功能的输出方向。 </p>
+<blockquote>
+<p>A、IN    B、OUT    C、INOUT    <u><strong>D、BUFFER</strong></u>  </p>
+</blockquote>
+</li>
+<li><p>13、在VHDL中用（  ）来把特定的结构体关联一个特定的实体，为一个大型系统的设计提供管理和进行工程组织。  </p>
+<blockquote>
+<p>A、输入    B、输出    C、综合    <u><strong>D、配臵</strong></u> </p>
+</blockquote>
+</li>
+<li><p>14、在VHDL中，45_234_287属于（  ）文字。  </p>
+<blockquote>
+<p><u><strong>A、整数</strong></u>    B、以数制基数表示的    C、实数    D、物理量 </p>
+</blockquote>
+</li>
+<li><p>15、在VDHL中，100M属于（  ）文字  </p>
+<blockquote>
+<p>A、整数    B、以数制基数表示的    C、实数    <u><strong>D、物理量</strong></u> </p>
+</blockquote>
+</li>
+<li><p>16、在VHDL标识符命名规则中，以（  ）开头的标识符是正确的。  </p>
+<blockquote>
+<p><u><strong>A、字母</strong></u>    B、数字    C、字母或数字    D、下划线 </p>
+</blockquote>
+</li>
+<li><p>17、在VDHL中，（  ）不能将信息带出对它定义的当前设计单元。  </p>
+<blockquote>
+<p>A、信号    B、常量    C、数据    <u><strong>D、变量</strong></u>  </p>
+</blockquote>
+</li>
+<li><p>18、在VHDL中，（  ）的数据传输是立即发生的，不存在任何延时的行为。  </p>
+<blockquote>
+<p>A、信号    B、常量    C、数据    <u><strong>D、变量</strong></u>  </p>
+</blockquote>
+</li>
+<li><p>19、在VHDL中，（  ）的数据传输不是立即发生的，目标信号的赋值是需要一定延时时间。  </p>
+<blockquote>
+<p><u><strong>A、信号</strong></u>    B、常量    C、数据    D、变量 </p>
+</blockquote>
+</li>
+<li><p>20、在VHDL中，为目标变量的赋值符号是（  ）。  </p>
+<blockquote>
+<p>A、=:    B、=    <u><strong>C、:=</strong></u>    D、&lt;=  </p>
+</blockquote>
+</li>
+<li><p>21、在VHDL中，为目标信号的赋值符号是（  ）。 </p>
+<blockquote>
+<p>A、=:    B、=    C、:=.   <u><strong>D、&lt;=</strong></u>  </p>
+</blockquote>
+</li>
+<li><p>22、在VHDＬ中，为定义信号名时，可以用（  ）符号为信号赋初值。  </p>
+<blockquote>
+<p>A、=:    B、=    <u><strong>C、:=</strong></u>    D、&lt;=  </p>
+</blockquote>
+</li>
+<li><p>23、在VHDL中，数组型（ARRAY）和记录型（RECORD）属于（  ）数据。  </p>
+<blockquote>
+<p>A、标量型    <u><strong>B、复合类型</strong></u>    C、存取类型    D、文件类型  </p>
+</blockquote>
+</li>
+<li><p>24、在VHDL的IEEE标准库中，预定义的位数据类型BIT有（  ）种逻辑值。  </p>
+<blockquote>
+<p><u><strong>A、2</strong></u>    B、3    C、8    D、9  </p>
+</blockquote>
+</li>
+<li><p>25、在VHDL的IEEE标准库中，预定义的标准逻辑位数据STD_LOGIC有（  ）种逻辑值。  </p>
+<blockquote>
+<p>A、2    B、3    C、8    <u><strong>D、 9</strong></u>  </p>
+</blockquote>
+</li>
+<li><p>26、在VHDL的IEEE标准库中，预定义的标准逻辑位STP_LOGIC的数据类型中的数据使用（  ）表示的。  </p>
+<blockquote>
+<p>A、小写字母    <u><strong>B 、大写字母</strong></u>    C、大或小写字母    D、全部是数字 </p>
+</blockquote>
+</li>
+<li><p>27、在VHDL中，用语句（  ）表示检测CLOCK的上升沿。  </p>
+<blockquote>
+<p>A、CLOCK’EVENT    </p>
+<p><u><strong>B、CLOCK’EVENT AND CLOCK=’1’</strong></u></p>
+<p>C、CLOCK=’1’   </p>
+<p>D、CLOCK’EVENT AND CLOCK=’0’ </p>
+</blockquote>
+</li>
+<li><p>28、在VHDL中，IF语句中至少应有一个条件句，条件句必须由（  ）表达式构成。</p>
+<blockquote>
+<p>A、BIT    B、STD_LOGIC    <u><strong>C、BOOLEAN</strong></u>    D、任意  </p>
+</blockquote>
+</li>
+<li><p>29、在VHDL的CASE语句中，条件句中的‚=&gt;‛不是操作符，它只相当于（  ）的作用。</p>
+<blockquote>
+<p>A、IF    <u><strong>B、THEN</strong></u>    C、AND    D、OR  </p>
+</blockquote>
+</li>
+<li><p>30、在VHDL的FOR_LOOP语句中的循环变量是一个临时变量，属于LOOP语句的局部变量，（  ）事先声明。  </p>
+<blockquote>
+<p>A、必须    <u><strong>B、不必</strong></u>    C、其类型要    D、其属性要  </p>
+</blockquote>
+</li>
+<li><p>31、在VHDL中，语句‚FOR N IN 0 TO 7 LOOP‛定义循环次数为（  ）次。  </p>
+<blockquote>
+<p><u><strong>A、8</strong></u>   B、7    C、0    D、1  </p>
+</blockquote>
+</li>
+<li><p>32、在VHDL的并行语句之间，可以用（  ）来传送往来信息。  </p>
+<blockquote>
+<p>A、变量    B、变量和信号    <u><strong>C、信号</strong></u>    D、常量 </p>
+</blockquote>
+</li>
+<li><p>33、在VHDL中，PROCESS结构是由（  ）语句组成的。  </p>
+<blockquote>
+<p><u><strong>A、顺序</strong></u>    B、顺序和并行    C、并行    D、任何  </p>
+</blockquote>
+</li>
+<li><p>34、在VHDL的进程语句格式中，敏感信号表列出的是设计电路的（  ）信号。  </p>
+<blockquote>
+<p><u><strong>A、输入</strong></u>    B、输入和输出    C、输出    D、时钟  </p>
+</blockquote>
+</li>
+<li><p>35、VHDＬ的块语句是并行语句结构，它的内部是由（  ）语句构成的。  </p>
+<blockquote>
+<p>A、并行和顺序    B、顺序    <u><strong>C、并行</strong></u>    D、任意  </p>
+</blockquote>
+</li>
+<li><p>36、在VHDL中，条件信号赋值语句WHEN_ELSE属于（ ）语句。  </p>
+<blockquote>
+<p>A、并行兼顺序    B、顺序    <u><strong>C、并行</strong></u>    D、不存在的 </p>
+</blockquote>
+</li>
+<li><p>37、过程调用前需要将过程的过程首和过程体装入（  ）中。 </p>
+<blockquote>
+<p> A、源程序    B、结构体    <u><strong>C、程序包</strong></u>    D、设计实体  </p>
+</blockquote>
+</li>
+<li><p>38、在原件例化（COMPONENT）语句中，用（  ）符号实现名称映射，将例化原件端口声明语句中的信号名与PORT MAP（）中的信号名关联起来。  </p>
+<blockquote>
+<p>A、=    B、:=    C、&lt;=    <u><strong>D、=&gt;</strong></u>  </p>
+</blockquote>
+</li>
+<li><p>39、VHDL的WORK库是用户设计的现行工作库，用于存放（  ）的工程项目。  </p>
+<blockquote>
+<p><u><strong>A、用户自己设计</strong></u>    B、公共程序    C、共享数据    D、图形设计  </p>
+</blockquote>
+</li>
+<li><p>40、在VHDL中，为了使已声明的数据类型、子程序、元件能被其他设计实体调用或共享，可以把它们汇集在（  ）中。  </p>
+<blockquote>
+<p>A、设计实体    B、程序库    C、结构体    <u><strong>D、程序包</strong></u> </p>
+</blockquote>
+</li>
+<li><p>41、QUARTUS II是（  ）  </p>
+<blockquote>
+<p>A、高级语言    B、硬件描述语言    <u><strong>C、EDA工具软件</strong></u>    D、综合软件 </p>
+</blockquote>
+</li>
+<li><p>42、使用QUARTUS II工具软件实现原理图设计输入，应采用（  ）方式。  </p>
+<blockquote>
+<p><u><strong>A、图形编辑</strong></u>    B、文本编辑    C、符号编辑    D、波形编辑  </p>
+</blockquote>
+</li>
+<li><p>43、在QUARTUS II工具软件中，完成编译网表提取、数据库建立 、逻辑综合、逻辑分割、适配、延时网表提取和编程文件汇编等操作，并检查设计文件是否正确的过程称为（  ）  </p>
+<blockquote>
+<p>A、编辑    <u><strong>B、编译</strong></u>    C、综合    D、编程  </p>
+</blockquote>
+</li>
+<li><p>44、在QUARTUS II 集成环境下为图形文件产生一个原件符号的主要用途是（  ） </p>
+<blockquote>
+<p>A、仿真    B、编译    C、综合    <u><strong>D、被高层系电路设计调用</strong></u> </p>
+</blockquote>
+</li>
+<li><p>45、QUARTUS II的波形文件类型是（  ）  </p>
+<blockquote>
+<p><u><strong>A、.VWF</strong></u>    B、.BDF    C、.VHD    D、.V </p>
+</blockquote>
+</li>
+<li><p>46、QUARTUS II的图形设计文件类型是（  ）  </p>
+<blockquote>
+<p>A、.VWF    <u><strong>B、.BDF</strong></u>    C、.VHD    D、.V  </p>
+</blockquote>
+</li>
+<li><p>47、MODELSIM是一种快速而又方便的HDL（  ）仿真工具。 </p>
+<blockquote>
+<p>A、综合型    B、编辑型    C、编程型    <u><strong>D、编译型</strong></u> </p>
+</blockquote>
+</li>
+<li><p>48、阵列型PLD的基本机构由（  ）组成。  </p>
+<blockquote>
+<p><u><strong>A、与阵列和或阵列</strong></u>        B、或阵列和与阵列     </p>
+<p>C、与非阵列和与非阵列    D、或非阵列和或非阵列  </p>
+</blockquote>
+</li>
+<li><p>49、在对PLD内部结构进行描述时采用的特殊简化方法中，列线与行线相交的交叉处若无标记，则表示耦合元件（  ）  </p>
+<blockquote>
+<p>A、固定连接    B、编程连接    C、与连接    <u><strong>D、不连接</strong></u> </p>
+</blockquote>
+</li>
+<li><p>50、用PLA进行逻辑设计时，应将逻辑函数表达式变换成（  ）式。  </p>
+<blockquote>
+<p>A、与非与非    B、异或    <u><strong>C、最简与或</strong></u>    D、最简或与</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/2021-06/">2021-06</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/%E9%BB%98%E8%AE%A4/">默认</a>
+  </div>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">记录</h3>
+  <ul class="entry">
+       
+      <li>提交了1.7.1</li>
+    
+      <li>增加了图床</li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">快链</h3>
+  <ul class="entry">
+       
+      <li><a target="_blank" rel="noopener" href="https://www.baidu.com">百度</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.bing.com">必应</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="http://cet.neea.edu.cn/">大学生英语四六级</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.gxeea.cn/">广西自考</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">学信网</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://cy.ncss.cn/">全国大学生创业服务网</a></li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/FPGA/">FPGA</a><small>3</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/Html%E4%B8%8ECSS/">Html与CSS</a><small>1</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>3</small></li>
+  
+    <li><a href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a><small>5</small></li>
+  
+    <li><a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%AF%BC%E4%B9%A6/">实验指导书</a><small>2</small></li>
+  
+    <li><a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a><small>1</small></li>
+  
+    <li><a href="/tags/%E8%AE%BA%E6%96%87/">论文</a><small>1</small></li>
+  
+    <li><a href="/tags/%E9%BB%98%E8%AE%A4/">默认</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">归档</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/2021-05/">2021-05</a><small>16</small></li>
+  
+    <li><a href="/categories/2021-06/">2021-06</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="aligncenter">
+   github真的卡
+</div>
+<div class="clearfix"></div>
+
+
+
+</footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+</body>
+</html>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c9247c4f7259c953ec192ff1f8347fc7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+

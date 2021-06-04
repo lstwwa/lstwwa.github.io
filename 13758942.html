@@ -107,7 +107,7 @@ class="h-entry post"
 </li>
 <li><p>   设计输入完成之后，应立即对文件进行（  编译  ）。</p>
 </li>
-<li><p>   基于硬件描述语言的数字系统设计目前最常用的设计方法称为（  自顶向上  ）设计法。</p>
+<li><p>   基于硬件描述语言的数字系统设计目前最常用的设计方法称为（  自顶向下  ）设计法。</p>
 </li>
 <li><p>   将硬件描述语言转化为硬件电路的过程称为（  综合  ）。 </p>
 </li>
@@ -682,6 +682,42 @@ class="h-entry post"
 <blockquote>
 <p>因为常用 的FPGA的结构是基于SRAM的，掉电后芯片内的 信息将消失，所以配备一个PROM或E2PROM，使得上电后，FPGA的信息由外部加载到芯片中，使得FPGA成为用户需要功能的芯片。</p>
 </blockquote>
+<p>分频</p>
+<pre><code>module  fenpin(clk_1HZ,res,clk);
+input  clk;
+input  res;
+reg[5:0]  cnt;
+output  clk_1HZ;
+parameter  Period=10;
+assign  clk_1HZ=(cnt==Period)?1:0;
+always  @(psoedgr  clk,posedge  res)
+begin
+if(res)begin  cnt&lt;=0;end
+else
+begin
+if(cnt&gt;=Period)cnt&lt;=0;
+else  cnt&lt;=cnt+1;
+end
+end
+endmodule
+</code></pre>
+<p>四选一</p>
+<pre><code>module mux4_1(y,a,b,c,d,s1,s2);
+input   s1,s2;
+input    a,b,c,d;
+output  y;
+reg  y;
+always @(s1 or  s2)
+begin
+case  (&#123;s1,s2&#125;)
+&#39;b00:   y=a;
+&#39;b01:   y=b;
+&#39;b10:   y=c;
+&#39;b11:   y=d;
+endcase
+end
+endmodule
+</code></pre>
 
       
     </div>

@@ -122,6 +122,104 @@ categories: YYYY-MM
 说明此篇文章
 &lt;!-- more --&gt;
 </code></pre>
+<h1 id="FPGA"><a href="#FPGA" class="headerlink" title="FPGA"></a>FPGA</h1><p>2、什么叫“综合”，一般综合包含哪些过程？</p>
+<blockquote>
+<p>综合的目的是将多个模块化设计文件合并为一个网表文件，并使层次设计平面化（即展平）</p>
+</blockquote>
+<p>3、简述“自顶向下”的设计流程。</p>
+<blockquote>
+<p>自顶向下的设计采用功能分割的方法，从顶层设计开始，逐层向下将设计内容进行分块和细化。</p>
+</blockquote>
+<p>4、EDA工具大致可以分为哪几个模块？各个模块的主要功能是什么？</p>
+<blockquote>
+<p>EDA工具大致可以分为设计输入编辑器，仿真器，HDL综合器，适配器（或布局线器）及下载器5个模块。</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>①编辑器：图形输入和HDL文本输入</li>
+<li>②仿真器：行为模型表达，电子系统的建模，逻辑电路的验证及门级系统的测试</li>
+<li>③HDL综合器:将硬件描述语言转化为硬件电路的重要工具</li>
+<li>④适配器：完成在目标系统器件上的布局布线</li>
+<li>⑤下载器:把电路设计结果下载到实际器件中</li>
+</ul>
+</blockquote>
+<p>VHDL特点：</p>
+<blockquote>
+<ul>
+<li>①VHDL具有强大的功能，覆盖面广，描述能力强。</li>
+<li>②VHDL有良好的可读性。</li>
+<li>③VHDL具有良好的可移植性。</li>
+<li>④使用VHDL可以延长设计的生命周期。</li>
+<li>⑤VHDL支持对大规模设计的分解和已有设计的再利用。</li>
+<li>⑥VHDL有利于保护知识产权。</li>
+</ul>
+</blockquote>
+<p>1、简述EDA技术设计电路的设计流程。</p>
+<blockquote>
+<p>设计准备、设计输入（原理图，硬件描述语言，波形图）、</p>
+</blockquote>
+<blockquote>
+<p>设计处理（优化，综合，适配，分割，布局，布线）、</p>
+</blockquote>
+<blockquote>
+<p>和器件编程，以及相应的功能仿真、时序仿真和器件测试。</p>
+</blockquote>
+<hr>
+<ul>
+<li>1D、不正确的：D-不同器件</li>
+<li>2B、q[3:0]：B-‘b1011</li>
+<li>3A、A&lt;&lt;8‘b11100011结果：A-’b0011000</li>
+<li>4A、A=8‘11100011，B=8’0001000则A&amp;&amp;B：A-‘b1</li>
+<li>5B、不属于赋值语句：B-if else</li>
+<li>6C、eda不包括：C-可编程逻辑器件</li>
+<li>7D、非合法标识符：D-1_ne_a</li>
+<li>8D、缩减运算：D-y=&amp;a</li>
+<li>9A、a=0，b=0，c=1:A-b‘00</li>
+<li>10C、C-case属于赋值语句</li>
+</ul>
+<h1 id="数字信号处理"><a href="#数字信号处理" class="headerlink" title="数字信号处理"></a>数字信号处理</h1><h2 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h2><ul>
+<li>1A、时序傅立叶变换：A-共轭对称函数</li>
+<li>2A、连续抽样信号在：A-单位圆</li>
+<li>3C、不是IRR：C-频率抽样型</li>
+<li>4A、关于FFT错误：A-新的变换</li>
+<li>5B、线性卷积6，圆周卷积5:B</li>
+<li>6B、N点DFT附属乘法次数：B-N2方</li>
+<li>7D、窗函数错误的：D-不能用于高通滤波器</li>
+<li>8A、FIR和IRR不正确的：A-FIR采用递归结构</li>
+<li>9A、yita（n）的z变换：A-1</li>
+<li>10A、抽样信号通过：A-理想低通滤波器</li>
+<li>11A、N需满足条件：A-N&gt;=M</li>
+<li>12D、x(n)=sin(30π/120)则N=：D=8</li>
+<li>13A、收敛域包括：A-单位圆</li>
+<li>14C、FIR幅度响应H(w)特点：C-w=0、2π偶对称，w=π奇对称</li>
+</ul>
+<h2 id="填空"><a href="#填空" class="headerlink" title="填空"></a>填空</h2><ul>
+<li>1、x（n）长度64，h（n）长度128，y(n)为 <u><strong>64+128-1=191点</strong></u>，如果采用基2FFT，则FFT至少<u><strong>256点</strong></u></li>
+<li>2、三种常用低通滤波器：<u><strong>巴特沃什滤波器、切比雪夫滤波器、椭圆滤波器</strong></u></li>
+<li>3、关系为<u><strong>Ω=w/T</strong></u>，映射变换关系<u><strong>Ω=（2/T）tan（w/2）</strong></u>或者<u><strong>w=2arctan（ΩT/2）</strong></u></li>
+<li>DFT表达式为////，时域的长度为<u><strong>N</strong></u>，间隔是<u><strong>-(2π/M)</strong></u></li>
+</ul>
+<h2 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h2><ul>
+<li>1：T-有限长的N点DFT。。。</li>
+<li>2：T-用双线变换法。。。</li>
+<li>3：F-DIF具有离散性和非周期性</li>
+<li>4：F-一个信号序列，。。。</li>
+<li>5：F-一个线性时不变的离散。。。</li>
+<li>6：T-序列的傅立叶变换。。。</li>
+<li>7：T-有限长序列的N点。。。</li>
+<li>8：F-模拟信号也可以。。。</li>
+<li>9：T-已知某离散系统。。。</li>
+<li>10：T-一个线性时不变系统。。。</li>
+</ul>
+<h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><ul>
+<li>D/A：数模转换</li>
+<li>Rectangle window：矩形窗</li>
+<li>DSP:数字信号处理</li>
+<li>Bartlett window：三角形窗</li>
+<li>Hamming窗：哈明窗</li>
+<li>Hanning：哈宁窗</li>
+<li>Blackman：布莱克曼</li>
+</ul>
 
       
     </div>

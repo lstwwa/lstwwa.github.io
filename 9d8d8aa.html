@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>数字信号处理试卷1 | 原の站</title>
+  <title>大二《数字信号处理》 | 原の站</title>
   <meta name="author" content="原">
   
   <meta name="description" content="1.0">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="数字信号处理试卷1"/>
+  <meta property="og:title" content="大二《数字信号处理》"/>
   <meta property="og:site_name" content="原の站"/>
 
   
@@ -53,7 +53,7 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article
-id="post-2021-06/数字信号处理试卷1"
+id="post-2021-06/大二《数字信号处理》"
 class="h-entry post"
 >
 
@@ -85,7 +85,7 @@ class="h-entry post"
       
       
   
-    <h1 class="p-name title" itemprop="headline name">数字信号处理试卷1</h1>
+    <h1 class="p-name title" itemprop="headline name">大二《数字信号处理》</h1>
   
 
 
@@ -96,7 +96,7 @@ class="h-entry post"
     <div class="e-content entry" itemprop="articleBody">
       
         <ul>
-<li>数字信号处理试卷1<span id="more"></span></li>
+<li>数字信号处理复习<span id="more"></span></li>
 </ul>
 <h1 id="一、填空题（每空1分-共10分）"><a href="#一、填空题（每空1分-共10分）" class="headerlink" title="一、填空题（每空1分,共10分）"></a>一、填空题（每空1分,共10分）</h1><p>1．序列x(n)    sin(3πn/5)的周期为 <u><strong>10</strong></u></p>
 <p>2．线性时不变系统的性质有 <u><strong>交换律，结合律、分配律</strong></u></p>
@@ -183,6 +183,71 @@ class="h-entry post"
 <p>3.<br><img src="https://raw.githubusercontent.com/lstwwa/Lpic/master/blog/2021-06/1-5-3-1.png"><br><img src="https://raw.githubusercontent.com/lstwwa/Lpic/master/blog/2021-06/1-5-3-2.png"></p>
 <p>4.<br><img src="https://raw.githubusercontent.com/lstwwa/Lpic/master/blog/2021-06/1-5-4-1.png"><br><img src="https://raw.githubusercontent.com/lstwwa/Lpic/master/blog/2021-06/1-5-4-2.png"></p>
 <p>5.<br><img src="https://raw.githubusercontent.com/lstwwa/Lpic/master/blog/2021-06/1-5-5-1.png"><br><img src="https://raw.githubusercontent.com/lstwwa/Lpic/master/blog/2021-06/1-5-5-2.png"></p>
+<p>巴特沃斯低通滤波器、切比雪夫滤波器、椭圆滤波器。</p>
+<ul>
+<li><p>Xa（t）前置滤波器：为了滤除模拟信号中的高频杂波。</p>
+</li>
+<li><p>A/D变换器：模拟信号经抽样变成离散信号。</p>
+</li>
+<li><p>数字信号处理器：按照预制要求对数字信号处理加工；</p>
+</li>
+<li><p>D/A变换器：数字信号变为模拟信号;</p>
+</li>
+<li><p>模拟滤波器：滤除高频部分，平滑模拟信号。Ya(t)</p>
+</li>
+<li><p>冲激响应不变法 双线性变换法 </p>
+</li>
+<li><p>脉冲响应</p>
+<blockquote>
+<p>优点：h(n)完全模仿模拟滤波器的单位抽样响应h(t),时域逼近良好保持线性关系ω=ΩT3、线性相位模拟滤波器转变为线性相位数字滤波器</p>
+<p>缺点：频率响应混叠，因此仅适用于带限的低通，带通滤波器的设计，不适合高通、带阻滤波器的设计。</p>
+</blockquote>
+</li>
+<li><p>双线程</p>
+<blockquote>
+<p>优点：不可能产生频谱混叠现象。</p>
+<p>缺点：除了零频率附件，Ω与ω之间严重非线性</p>
+</blockquote>
+</li>
+</ul>
+<p>FIR网络结构的特点是没有反馈支路，即没有环路，其单位脉冲响应是有限长的。</p>
+<p>线性常系数差分方程的求解1、经典解法2、递推解法3、变化域方法<br>数字滤波器的优点精度高稳定适于批量生产体积小重量轻灵活不要求阻抗匹配。</p>
+<ul>
+<li><p> RN(n) :长度是N的矩形序列</p>
+</li>
+<li><p> DSP :数字信号处理</p>
+</li>
+<li><p> DFT[x(n)]N ：N点离散傅里叶变换</p>
+</li>
+<li><p> DIF-FFT :快速傅立叶变换</p>
+</li>
+<li><p> D/A ：数模转换器</p>
+</li>
+<li><p> hamming窗 ：哈明窗–改进的升余弦窗</p>
+</li>
+<li><p> blackman窗 ：布莱克曼窗</p>
+</li>
+<li><p> A/D ：模数转换器</p>
+</li>
+<li><p> DFT ：离散傅里叶变换</p>
+</li>
+<li><p>基2FFT快速计算的原理是什么？他需要的复乘、复加次数各是多少？</p>
+</li>
+</ul>
+<blockquote>
+<p>原理：利用WNkn的特性，将N点序列分解为较短的序列，计算短序列的DFT，最后再组合起来。 </p>
+</blockquote>
+<ul>
+<li>复乘次数：N/2<em>log2N，复加次数：N</em>log2N</li>
+<li>用窗函数法设计FIR 数字滤波器时过渡带的宽度不但与窗的类型有关，还与窗的  采样点数 有关</li>
+<li>总结上述内容，采样定理叙述如下:</li>
+</ul>
+<blockquote>
+<p>(1)对连续信号进行等间隔采样形成采样信号，采样信号的频谱是原连续信号的频谱以采样频率Ωs为周期进行周期性的延拓形成的。</p>
+</blockquote>
+<blockquote>
+<p>(2) 设连续信号xa(t)属带限信号，最高截止频率为Ωc，如果采样角频率Ωs≥Ωc，那么让采样信号x’a(t)通过一个增益为T、截止频率为Ωs/2=π/T的理想低通滤波器，可以唯一地恢复出原连续信号xa(t)。否则，Ωs&lt;2Ωc会造成采样信号中的频谱混叠现象，不可能无失真地恢复原连续信号</p>
+</blockquote>
 
       
     </div>
@@ -250,7 +315,7 @@ class="h-entry post"
   <h3 class="title">标签</h3>
   <ul class="entry">
   
-    <li><a href="/tags/FPGA/">FPGA</a><small>3</small></li>
+    <li><a href="/tags/FPGA/">FPGA</a><small>2</small></li>
   
     <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
   
@@ -258,7 +323,7 @@ class="h-entry post"
   
     <li><a href="/tags/Matlab/">Matlab</a><small>3</small></li>
   
-    <li><a href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a><small>9</small></li>
+    <li><a href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a><small>8</small></li>
   
     <li><a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%AF%BC%E4%B9%A6/">实验指导书</a><small>2</small></li>
   
@@ -277,7 +342,7 @@ class="h-entry post"
   
     <li><a href="/categories/2021-05/">2021-05</a><small>16</small></li>
   
-    <li><a href="/categories/2021-06/">2021-06</a><small>6</small></li>
+    <li><a href="/categories/2021-06/">2021-06</a><small>4</small></li>
   
   </ul>
 </div>

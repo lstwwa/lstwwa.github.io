@@ -41,11 +41,11 @@
 <!-- 修改副标题居中 -->
   <ul>
     
-      <li><a href="/archives">归档</a></li>
-    
-      <li><a href="/tools">工具</a></li>
-    
       <li><a href="/about">关于</a></li>
+    
+      <li><a href="/about/tools">工具</a></li>
+    
+      <li><a href="/about/Diary">日志</a></li>
     
   </ul>
   <div class="clearfix"></div>
@@ -100,7 +100,65 @@ class="h-entry post"
         <p>说明此篇文章</p>
 <span id="more"></span>
 
-<h1 id="还没写"><a href="#还没写" class="headerlink" title="还没写"></a>还没写</h1>
+<h1 id="还没写"><a href="#还没写" class="headerlink" title="还没写"></a>还没写</h1><h3 id="构建网页"><a href="#构建网页" class="headerlink" title="构建网页"></a>构建网页</h3><pre><code>hexo g
+</code></pre>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><pre><code>hexo s
+</code></pre>
+<p>随后可以在<strong><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a></strong>中看自己的博客</p>
+<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><pre><code>hexo clean
+</code></pre>
+<p>每一次上传前最好都清除一遍</p>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><pre><code>hexo d
+</code></pre>
+<h2 id="MarkDown"><a href="#MarkDown" class="headerlink" title="MarkDown"></a>MarkDown</h2><h3 id="MarkDown工具"><a href="#MarkDown工具" class="headerlink" title="MarkDown工具"></a>MarkDown工具</h3><pre><code>Windows：
+MacOS：iA Writer
+Linux：
+Android：
+iOS：
+</code></pre>
+<h3 id="MarkDown语法"><a href="#MarkDown语法" class="headerlink" title="MarkDown语法"></a>MarkDown语法</h3><pre><code>输入代码：tab键
+
+分类菜单 # 一级菜单 ######
+分类菜单 ## 二级菜单 ######
+一共有六级菜单
+**加粗字体**
+*斜体*
+&gt;引用
+</code></pre>
+<h3 id="显示更多"><a href="#显示更多" class="headerlink" title="显示更多"></a>显示更多</h3><pre><code>&lt;!-- more --&gt;
+</code></pre>
+<h3 id="在网页中使用图片"><a href="#在网页中使用图片" class="headerlink" title="在网页中使用图片"></a>在网页中使用图片</h3><pre><code>![](/2021/04/04/text/text.jpg)
+</code></pre>
+<h3 id="右上角github徽标"><a href="#右上角github徽标" class="headerlink" title="右上角github徽标"></a>右上角github徽标</h3><p>在这里</p>
+<pre><code>https://tholman.com/github-corners/
+</code></pre>
+<p>本文用的</p>
+<pre><code>&lt;a href=&quot;https://github.com/lstwwa&quot; class=&quot;github-corner&quot; aria-label=&quot;View source on GitHub&quot;&gt;&lt;svg width=&quot;80&quot; height=&quot;80&quot; viewBox=&quot;0 0 250 250&quot; style=&quot;fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2&quot; fill=&quot;currentColor&quot; style=&quot;transform-origin: 130px 106px;&quot; class=&quot;octo-arm&quot;&gt;&lt;/path&gt;&lt;path d=&quot;M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z&quot; fill=&quot;currentColor&quot; class=&quot;octo-body&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;style&gt;.github-corner:hover .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;@keyframes octocat-wave&#123;0%,100%&#123;transform:rotate(0)&#125;20%,60%&#123;transform:rotate(-25deg)&#125;40%,80%&#123;transform:rotate(10deg)&#125;&#125;@media (max-width:500px)&#123;.github-corner:hover .octo-arm&#123;animation:none&#125;.github-corner .octo-arm&#123;animation:octocat-wave 560ms ease-in-out&#125;&#125;&lt;/style&gt;
+</code></pre>
+<p> 添加到themes/next/layout/_layout.njk文件的</p>
+<pre><code>&lt;div class=&quot;headband&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>的下一排中</p>
+<h3 id="添加感谢阅读"><a href="#添加感谢阅读" class="headerlink" title="添加感谢阅读"></a>添加感谢阅读</h3><p>文章置顶<br>    node_modules/hexo-generator-index/lib/generator.js<br>加入代码</p>
+<pre><code>   const posts = locals.posts.sort(config.index_generator.order_by);
+ ....  以下
+ posts.data = posts.data.sort(function(a, b) &#123;
+     if(a.top &amp;&amp; b.top) &#123; // 两篇文章top都有定义
+         if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
+         else return b.top - a.top; // 否则按照top值降序排
+     &#125;
+     else if(a.top &amp;&amp; !b.top) &#123; // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）
+         return -1;
+     &#125;
+     else if(!a.top &amp;&amp; b.top) &#123;
+         return 1;
+     &#125;
+     else return b.date - a.date; // 都没定义按照文章日期降序排
+ &#125;);
+ ....  以上
+ sort(posts.data, (a, b) =&gt; (b.sticky || 0) - (a.sticky || 0));
+</code></pre>
+
       
     </div>
     <footer>
@@ -193,219 +251,6 @@ class="h-entry post"
   
   </ul>
 </div>
-
-
-<!--
-
-<div id="tree">
-    
-
-    
-                    <ul>
-                        <li class="directory">
-                            <a href="#" class="directory">
-                                <i class="fa fa-folder"></i>
-                                2021-05
-                            </a>
-                            
-                    <ul>
-                        <li class="file">
-                            <a href="/871d6a1.html">
-                                <i class="fa fa-file"></i>
-                                FPGA历史作业
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/18ca6c8.html">
-                                <i class="fa fa-file"></i>
-                                FPGA实验
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/53a480b8.html">
-                                <i class="fa fa-file"></i>
-                                HTML常用标签
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/eb74bc6a.html">
-                                <i class="fa fa-file"></i>
-                                Mac上Hexo建站
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/5d2b0e42.html">
-                                <i class="fa fa-file"></i>
-                                Matlab例子
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/c1b18207.html">
-                                <i class="fa fa-file"></i>
-                                Matlab函数
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/97384efc.html">
-                                <i class="fa fa-file"></i>
-                                数字信号处理作业
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/f7c867e2.html">
-                                <i class="fa fa-file"></i>
-                                数字信号处理实验指导书
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/2ebe2c5b.html">
-                                <i class="fa fa-file"></i>
-                                树莓派Zero
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/5d8d25e1.html">
-                                <i class="fa fa-file"></i>
-                                百度建站
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/b1b3bb7b.html">
-                                <i class="fa fa-file"></i>
-                                英语口语考试(2021年上半年)
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/32593ffb.html">
-                                <i class="fa fa-file"></i>
-                                英语短语词汇(2021上半年)
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/fa52048.html">
-                                <i class="fa fa-file"></i>
-                                论文模板
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/72f16dec.html">
-                                <i class="fa fa-file"></i>
-                                这是博客的第一篇文章
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/79e0e5e5.html">
-                                <i class="fa fa-file"></i>
-                                通信电子线路实验
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/c9fa1679.html">
-                                <i class="fa fa-file"></i>
-                                马克思主意概论复习资料
-                            </a>
-                        </li>
-                    </ul>
-    
-                        </li>
-                        
-                    </ul>
-    
-                    <ul>
-                        <li class="directory">
-                            <a href="#" class="directory">
-                                <i class="fa fa-folder"></i>
-                                2021-06
-                            </a>
-                            
-                    <ul>
-                        <li class="file">
-                            <a href="/7105b066.html">
-                                <i class="fa fa-file"></i>
-                                大二《EDA(FPGA)技术》
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/9d8d8aa.html">
-                                <i class="fa fa-file"></i>
-                                大二《数字信号处理》
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/3b0a51ae.html">
-                                <i class="fa fa-file"></i>
-                                大二《电子测量》
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul>
-                        <li class="file">
-                            <a href="/3b0a51ae.html">
-                                <i class="fa fa-file"></i>
-                                大二《通信电子线路》
-                            </a>
-                        </li>
-                    </ul>
-    
-                        </li>
-                        
-                    </ul>
-    
-</div>
-
- -->
 
 
 </aside>

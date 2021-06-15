@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>大二《高频电子电路》总复习 | 原の站</title>
+  <meta name="author" content="原">
+  
+  <meta name="description" content="1.0">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="大二《高频电子电路》总复习"/>
+  <meta property="og:site_name" content="原の站"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+<body>
+  <header id="header" class="inner"><div class="aligncenter">
+  <nav id="main-nav" class="aligncenter">
+  <h1><a href="/">原の站</a></h1>
+  <h2><a href="/">Let‘s Show Then Who We Are</a></h2>
+
+
+<nav id="main-nav" class="aligncenter">
+<!-- 修改副标题居中 -->
+  <ul>
+    
+      <li><a href="/about">关于</a></li>
+    
+      <li><a href="/about/tools">工具</a></li>
+    
+      <li><a href="/about/Diary">日志</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article
+id="post-2021-06/大二《高频电子电路》总复习"
+class="h-entry post"
+>
+
+
+
+ 
+  <div class="post-content">
+    
+    <header>
+      
+             
+              
+              
+              
+              <!--    显示图标
+        <div class="icon"></div>
+                       -->
+                       
+                       
+                       
+                       
+        <time class="dt-published" datetime="2021-06-15T05:09:47.630Z">
+        
+        <a href="/ebb3241.html">2021-06-15
+        
+        </a></time>
+      
+      
+      
+      
+  
+    <h1 class="p-name title" itemprop="headline name">大二《高频电子电路》总复习</h1>
+  
+
+
+    </header>
+    
+    
+    
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <ul>
+<li>高频电子电路总复习(还在完善)<span id="more"></span>
+<h1 id="一、-绪论"><a href="#一、-绪论" class="headerlink" title="一、    绪论"></a>一、    绪论</h1></li>
+</ul>
+<p>1、掌握调幅发射机和超外差接收机的组成框图。</p>
+<p><img src="https://i.loli.net/2021/06/15/sdM4SyNzXUqBenm.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/B19i5EFHrZacXfs.png"></p>
+<p>2、理解无线电通信调制的原因以及模拟调制的方式。<br>有线通信实现了地理距离的通信，无线通信实现了地球距离甚至星球距离的通信（反映了人类通信需求从受束缚向自由移动方向前进的必然趋势）。</p>
+<p>模拟调制的方式：调幅，调频，调相。</p>
+<p>二、小信号调谐放大器</p>
+<p>1、掌握LC串/并联回路谐振原理及其谐振时的特点。理解谐振回路的作用；</p>
+<p><img src="https://i.loli.net/2021/06/15/CO15TlVbks2hBHG.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/tLbNujCoQPr9ZzE.png"></p>
+<p>作用：选频、放大。当调谐时，谐振阻抗最大，此时可以实现最大的电压增益。 而非调谐状态下，谐振阻抗非常小，信号基本没有被放大。<br>并联谐振称为电流谐振，相当于开路（谐振时回路电压最大，呈电阻性，电阻端电压相当于电源电压。L,C都有电流，大小相等，相位相反整体电流为“0”，与外部电路没有电流的交换，所以看成开路，阻抗无穷大，二端元件）。<br>串联谐振称为电压谐振，相当于短路（谐振时阻抗为0，相当于短路电流最大）</p>
+<hr>
+<p>2、掌握LC谐振回路谐振频率、谐振阻抗、品质因数、通频带、矩形系数概念及计算；（重点）<br><img src="https://i.loli.net/2021/06/15/5dWsgpcjbT7BoxY.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/aQWYytTjNUoqcf1.png"></p>
+<p>通频带：</p>
+<p><img src="https://i.loli.net/2021/06/15/qhIB4KRStosrFNy.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/m5YidXEHuoKr6UB.png"></p>
+<hr>
+<p>3、理解信号源和负载对谐振回路的影响，理解负载或信号源抽头接入谐振回路的目的；</p>
+<ul>
+<li><p>信号源和负载直接并在L,C元件两端，存在以下三个问题：</p>
+</li>
+<li><p>1、谐振回路Q 值大大下降，通频带加宽一般不能满足实际要求；</p>
+</li>
+<li><p>2、信号源和负载电阻常常是不相等的，即阻抗不匹配。当相差较多时，负载上得到的功率可能很小；</p>
+</li>
+<li><p>3、信号源输出电容和负载电容影响回路的谐振频率，在实际问题中，RS ,RL,CL,CS给定后，不能任意改动。</p>
+</li>
+<li><p>解决这些问题的途径是采用“阻抗变换”的方法。等效电路：电路阻抗，Q不变。</p>
+</li>
+<li><p>理解负载或信号源抽头接入谐振回路的目的：降低信号源内阻Rs，负载电阻RL对回路品质因数Q的影响</p>
+</li>
+</ul>
+<hr>
+<p>4、理解小信号谐振放大电路的作用及其技术指标特点；</p>
+<ul>
+<li>作用：调谐回路作为放大器的交流负载，具有放大和选频的功能</li>
+</ul>
+<p>技术指标特点：</p>
+<ul>
+<li>1、放大器输入导纳Yi</li>
+<li>2、放大器输出导纳</li>
+<li>3、电压放大倍数：一般情况下，放大器在回路调谐时，输出电压与输入电压之间的相位差并不是180°。</li>
+<li>4、放大器的通频带</li>
+<li>5、单调谐放大器的选择性：单调谐放大器的选择性较差。</li>
+</ul>
+<hr>
+<p>5、了解提高小信号调谐放大器稳定性的常用方法。</p>
+<ul>
+<li>1、是从晶体管本身想办法，减小其反向传输导纳yre的值。</li>
+<li>2、是从电路上设法消除晶体管的反向作用，使它单向化，具体方法有中和法与失配法。</li>
+</ul>
+<hr>
+<p>三、高频功率放大器</p>
+<ul>
+<li><p>1、理解丙类谐振功放的原理；理解导通角与功放效率之间的关系；理解欠压、过压、临界工作状态，及不同工作状态的特点，包括集电极电流波形、输出功率和效率的变化；</p>
+</li>
+<li><p>结构与原理：与高频功放的线路基本相同，唯一不同之处是它的集电极回路对输入信号的某次谐波频率nf调谐<br><img src="https://i.loli.net/2021/06/15/jYbDfaX5Rm1ekH4.png"></p>
+</li>
+<li><p>1、欠压——晶体管在任何时刻都工作在放大状态；</p>
+</li>
+<li><p>2、临界——刚刚进入饱和区的边缘；</p>
+</li>
+<li><p>3、过压——晶体管工作时有›部分时间进入饱和区。</p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2021/06/15/q6dHWvhuUOTSNyc.png"></p>
+<ul>
+<li>欠压最容易烧坏功率管，保护功率管应在过压状态。</li>
+</ul>
+<hr>
+<p>2、理解集电极电压利用系数和波形系数；掌握功放在临界状态下电压、电流、功率和效率的定量计算；（重点）</p>
+<p><img src="https://i.loli.net/2021/06/15/GJdZH8EYj3Ffn1h.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/isgoq8Zly2c9apN.png"></p>
+<p>临界状态</p>
+<p><img src="https://i.loli.net/2021/06/15/ibjW3QdpVM85nkq.png"></p>
+<hr>
+<p>3、掌握谐振功放的直流馈电电路。</p>
+<p><img src="https://i.loli.net/2021/06/15/YaTIn1prqCSZeAj.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/N7TlCLfW5h1JgzR.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/69fWTVBQzYmoR1y.png"></p>
+<hr>
+<p>4、了解丙类倍频器，最佳导通角 （120/n）</p>
+<p>倍频次数n值较高时，损耗较大，效率较低，故丙类倍频器一般只限于二倍频和三倍频的应用。最佳导通角：n=2, 60°、n=3，40°。</p>
+<h1 id="四、正弦波振荡器"><a href="#四、正弦波振荡器" class="headerlink" title="四、正弦波振荡器"></a>四、正弦波振荡器</h1><p>1、理解反馈型正弦波振荡电路的组成及其原理，起振、平衡条件；<br><img src="https://i.loli.net/2021/06/15/oB9fuCh3Vv5eXUz.png"></p>
+<p><img src="https://i.loli.net/2021/06/15/Ynp1EHySbgT2fOw.png"></p>
+<hr>
+<p>2、理解常见LC三点式振荡器和石英晶体振荡的原理，理解满足相位条件的振荡电路构成原则；比较各种类型振荡器的优缺点；</p>
+<p><img src="https://i.loli.net/2021/06/15/VcgKx3qUNSseuMi.png"></p>
+<p>利用石英晶体的压电效应（机和电的相互转换效应）<br>各电路优缺点：</p>
+<p>考毕兹（电容）：</p>
+<p>优点：1，振荡波形好。2、频率稳定度较高。3、工作频率可以做的较高。</p>
+<p>缺点：1、调节C1或者C2来改变振荡频率时，反馈系数也将改变。</p>
+<ul>
+<li>哈特莱（电感）：</li>
+</ul>
+<p>优点：1、容易起振。2、振荡频率调节方便。</p>
+<p>缺点：1、振荡波形不好。2、振荡频率不能做的太高。</p>
+<p>两种改进型电路：</p>
+<ul>
+<li>克拉泼（电容改进）：</li>
+</ul>
+<p>优点：振荡频率比电容三点式要好。</p>
+<p>缺点1、C1，C2如果过大，震荡幅度太低。2、C3减小可以提高Fs，振荡幅度显著下降，当减小到一定时，可能停振，但减小C3可以提高频率稳定度。</p>
+<p>3、波段范围不宽，波段覆盖倍数小，一般约为1.2~1.3波段内输出幅度不稳定，不易起振。<br>西勒电路（电感改进）：</p>
+<p>优点：由于C3为固定值,所以P值（接入系数）不变（即与调谐电容C4无关）,所以在波段内振幅比较稳定,且调谐范围比较宽,实际中常用于宽波段工作系统中。调谐方便，输出电压幅度稳定。<br>晶体</p>
+<p>皮尔斯电路：相当于克拉泼电路。</p>
+<p>密勒电路：稳定度不如皮尔斯电路。</p>
+<hr>
+<p>3、了解晶体的电抗特性，晶体在串、并联型振荡中所起的作用；</p>
+<p><img src="https://i.loli.net/2021/06/15/yRL6eAjZIb9FlWT.png"></p>
+<hr>
+<p>4、会根据相位条件的判断准则，判断电路是否可以振荡。<br>原则：射同集异（书本P140，3.5）</p>
+<hr>
+<h1 id="五、振幅调制与解调"><a href="#五、振幅调制与解调" class="headerlink" title="五、振幅调制与解调"></a>五、振幅调制与解调</h1><p>1、理解振幅调制概念和原理，常见的几种模拟调幅方式，掌握AM、DSB、SSB数学表达式，波形特点、频谱图与带宽。了解各调幅波产生的框图。</p>
+<ul>
+<li><p>振幅调制：由调制信号去控制载波振幅，使已调信号的振幅随调制信号线性变化。</p>
+</li>
+<li><p>原理：用传递的低频信号去控制作为传送载体的高频振荡波（载波）的幅度，使已调波幅度随调制信号的大小线性变化，而载波角频率不变。</p>
+</li>
+<li><p>频率调制：调制信号控制载波频率，使已调波的频率随调制信号线性变化。</p>
+</li>
+<li><p>相位调制：调制信号控制载波相位，使已调波的相位随调制信号线变化。 </p>
+</li>
+<li><p>AM:     </p>
+<blockquote>
+<p>AM波形特点：</p>
+<p>（1）振幅（包络）变化规律与调制信号波形一致 </p>
+<p>（2）调幅度ma反映了调幅的强弱程度。ma值越大调幅越深：=0（未调制）、=1（百分之百调制）、&gt;1（过调幅，包络失真）</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/06-15/">06-15</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a>
+  </div>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">记录</h3>
+  <ul class="entry">
+       
+      <li>提交了1.7.1</li>
+    
+      <li>增加了图床</li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">快链</h3>
+  <ul class="entry">
+       
+      <li><a target="_blank" rel="noopener" href="https://www.baidu.com">百度</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.bing.com">必应</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="http://cet.neea.edu.cn/">大学生英语四六级</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.gxeea.cn/">广西自考</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">学信网</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://cy.ncss.cn/">全国大学生创业服务网</a></li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/FPGA/">FPGA</a><small>2</small></li>
+  
+    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/tags/Html%E4%B8%8ECSS/">Html与CSS</a><small>1</small></li>
+  
+    <li><a href="/tags/Matlab/">Matlab</a><small>3</small></li>
+  
+    <li><a href="/tags/%E5%A4%A7%E5%AD%A6/">大学</a><small>11</small></li>
+  
+    <li><a href="/tags/%E5%AE%9E%E9%AA%8C%E6%8C%87%E5%AF%BC%E4%B9%A6/">实验指导书</a><small>2</small></li>
+  
+    <li><a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">树莓派</a><small>1</small></li>
+  
+    <li><a href="/tags/%E8%AE%BA%E6%96%87/">论文</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">归档</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/06-15/">06-15</a><small>3</small></li>
+  
+    <li><a href="/categories/2021-05/">2021-05</a><small>16</small></li>
+  
+    <li><a href="/categories/2021-06/">2021-06</a><small>4</small></li>
+  
+  </ul>
+</div>
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="aligncenter">
+   github真的卡
+</div>
+<div class="clearfix"></div>
+
+
+
+</footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+</body>
+</html>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c9247c4f7259c953ec192ff1f8347fc7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+

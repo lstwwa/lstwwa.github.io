@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  
+  <title>ADB|索尼精简列表 | 原的站</title>
+  <meta name="author" content="原">
+  
+  <meta name="description" content="0.8.8b">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="ADB|索尼精简列表"/>
+  <meta property="og:site_name" content="原的站"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="shortcut icon" href="/favicon.png">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
+  
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+<body>
+  <header id="header" class="inner"><div class="aligncenter">
+
+<nav id="main-nav" class="aligncenter">
+  <h1><a href="/">原的站</a></h1>
+  
+  <nav id="main-nav" class="aligncenter">
+  <h4><a href="/">我是Lstwwa，为了更好的2023加油</a></h4>
+
+<!-- 修改副标题居中 -->
+<nav id="main-nav" class="aligncenter">
+  <ul>
+    
+      <li><a href="/about/tools">工具</a></li>
+    
+      <li><a href="/about/Links">友链</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div>
+</div>
+</header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article
+id="post-支持-数码产品/ADB|索尼精简列表"
+class="h-entry post"
+>
+
+
+
+ 
+  <div class="post-content">
+
+
+<header>
+
+
+
+    
+        
+    <!--    显示图标
+
+            <div class="icon"></div>
+            
+    -->
+                                                 
+
+     
+     
+     
+    <!--    题目显示    -->
+
+          
+  
+    <h1 class="p-name title" itemprop="headline name">ADB|索尼精简列表</h1>
+  
+
+
+          
+    <!--    题目显示    -->
+
+</header>
+    
+    
+    <!--    文章显示    -->
+        <div class="e-content entry" itemprop="articleBody">
+              
+                <ul>
+<li>主要列出了索尼UI里的一些包名，提供精简使用。</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="卸载与安装系统应用"><a href="#卸载与安装系统应用" class="headerlink" title="卸载与安装系统应用"></a>卸载与安装系统应用</h1><p>以下有两种常用的方式来进行对系统软件的卸载和停用</p>
+<ul>
+<li><p>停用软件</p>
+<pre><code>  adb shell pm disable-user +APPpackagename
+</code></pre>
+</li>
+<li><p>启用</p>
+<pre><code>  adb shell enable +APPpackagename
+</code></pre>
+</li>
+<li><p>卸载软件</p>
+<pre><code>  adb shell pm uninstall --user 0 +APPpackagename
+</code></pre>
+</li>
+<li><p>安装</p>
+<pre><code>  adb shell pm install-existing --user 0 +APPpackagename
+</code></pre>
+</li>
+</ul>
+<p>他们有以下区别</p>
+<ul>
+<li><p>禁用的话接口会依然存在，但如果卸载的话就不会有接口</p>
+<blockquote>
+<p>例如华为的下拉搜索，使用禁用的话依然保留下拉动画</p>
+</blockquote>
+</li>
+<li><p>某些情况下卸载反而会比停用更加安全</p>
+<blockquote>
+<p>例如小米禁用或者卸载应用商店后会卡米，但是禁用状态下无法进入ADB调试而卸载则可以进入ADB</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li><p><strong>1、我建议你先对重要数据进行备份后再开始你的精简操作，对手机的ADB调试在一些情况下拥有足够的危险性</strong></p>
+</li>
+<li><p><strong>2、如果你对以下列表表示怀疑请自行利用软件进行核对并且不要使用本列表的任何数据，当然你可以使用Devcheck查看本机包名</strong></p>
+</li>
+<li><p><strong>3、在一些系统上比如拥有隐私空间或者第二个用户，使用卸载的方式精简依赖比如谷歌服务，可能会导致一些很奇怪的问题，请自行测试</strong></p>
+</li>
+<li><p><strong>4、我仅列出包名列表但使用本列表做的所有操作导致数据丢失本人不负任何责任</strong></p>
+</li>
+<li><p><strong>5、所有的列表都会有一定的时限性，本列表总结于2022年1月3日</strong></p>
+</li>
+</ul>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><p><strong>简易ADB工具包</strong>：<a target="_blank" rel="noopener" href="https://wws.lanzoui.com/iTuveuu0lcd"><u>点击此处下载</u> *</a></p>
+<h6 id="一般情况下本工具完全满足本精简需求，如果你喜欢官方的ADB工具包，请在网站头顶的工具页面内下载-platform-tools"><a href="#一般情况下本工具完全满足本精简需求，如果你喜欢官方的ADB工具包，请在网站头顶的工具页面内下载-platform-tools" class="headerlink" title="* 一般情况下本工具完全满足本精简需求，如果你喜欢官方的ADB工具包，请在网站头顶的工具页面内下载 platform-tools"></a>* <em>一般情况下本工具完全满足本精简需求，如果你喜欢官方的ADB工具包，请在网站头顶的工具页面内下载 platform-tools</em></h6><h1 id="设备"><a href="#设备" class="headerlink" title="设备"></a>设备</h1><h2 id="似乎通过的设备"><a href="#似乎通过的设备" class="headerlink" title="似乎通过的设备"></a>似乎通过的设备</h2><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">版本</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+</tr>
+</tbody></table>
+<h2 id="确定通过的设备"><a href="#确定通过的设备" class="headerlink" title="确定通过的设备"></a>确定通过的设备</h2><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">版本</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">xz1c</td>
+<td align="center">日版9.0</td>
+<td align="center">通过</td>
+</tr>
+</tbody></table>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h2 id="索尼日版预装"><a href="#索尼日版预装" class="headerlink" title="索尼日版预装"></a>索尼日版预装</h2><pre><code>com.nttdocomo.android.msg
+jp.co.fsi.fs1seg
+com.rsupport.rs.activity.ntt
+com.nttdocomo.android.bugreport
+jp.dmapnavi.navi02
+com.nttdocomo.android.areamail
+com.nttdocomo.android.atf
+com.nttdocomo.android.accountwipe
+com.nttdocomo.android.pf.dcmippushaggregator
+com.nttdocomo.android.pf.dcmwappush
+jp.co.omronsoft.android.decoemojimanager_docomo
+jp.co.nttdocomo.saigaiban
+com.nttdocomo.android.store
+com.nttdocomo.android.applicationmanager
+com.nttdocomo.android.accountauthenticator
+com.nttdocomo.android.sdcardbackup
+com.nttdocomo.android.cloudset
+com.nttdocomo.android.initialization
+com.nttdocomo.android.dhome
+com.nextbit.app
+jp.co.nttdocomo.lcsapp
+jp.co.nttdocomo.lcsappsub
+jp.co.nttdocomo.carriermail
+com.android.contacts
+com.nttdocomo.android.docomoset
+com.nttdocomo.android.felicaremotelock
+com.nttdocomo.android.idmanager
+com.nttdocomo.android.photocollection
+com.nttdocomo.android.dmenu2
+com.ipg.gguide.dcm_app.android
+com.nttdocomo.android.voicetranslation
+jp.id_credit_sp.android
+com.nttdocomo.android.iconcier
+com.nttdocomo.android.iconcier_contents
+com.felicanetworks.mfc
+com.nttdocomo.android.voiceeditor
+com.nttdocomo.android.remotelock
+com.felicanetworks.mfm.main
+com.felicanetworks.mfm
+com.felicanetworks.mfs
+com.nttdocomo.osaifu.tsmproxy
+com.felicanetworks.mfw.a.main
+com.felicanetworks.mfw.a.boot
+com.nttdocomo.android.devicehelp
+com.qualcomm.qti.qms.service.telemetry
+com.nttdocomo.android.wipe
+com.rsupport.rsperm.ntt
+com.nttdocomo.android.schedulememo
+com.nttdocomo.android.screenlockservice
+com.nttdocomo.android.osv
+com.nttdocomo.android.phonemotion
+com.touchtype.swiftkey
+com.swiftkey.swiftkeyconfigurator
+com.nttdocomo.android.tapandpay
+com.nttdocomo.android.toruca
+com.nttdocomo.android.mascot
+com.nttdocomo.android.databackup
+com.nttdocomo.android.cloudstorageservice
+com.nttdocomo.android.dpoint
+com.nttdocomo.android.mydocomo
+</code></pre>
+<h2 id="谷歌服务"><a href="#谷歌服务" class="headerlink" title="谷歌服务"></a>谷歌服务</h2><pre><code>com.google.android.apps.docs.editors.sheets
+com.google.android.apps.maps
+com.google.android.apps.docs.editors.slides
+com.google.android.apps.docs.editors.docs
+com.google.android.apps.photos
+com.google.android.apps.docs
+com.android.chrome
+com.google.android.apps.tachyon
+com.google.android.gm
+com.google.android.googlequicksearchbox
+com.google.android.backuptransport
+com.google.android.gsf
+com.google.android.tts
+com.google.android.onetimeinitializer
+com.google.android.videos
+com.google.android.gms
+com.android.vending
+com.google.android.music
+com.google.android.partnersetup
+com.google.android.syncadapters.contacts
+com.google.android.apps.turbo
+com.android.hotwordenrollment.okgoogle
+com.google.android.youtube
+com.google.android.setupwizard
+com.google.android.apps.restore
+com.google.android.calendar
+</code></pre>
+<h2 id="索尼预装"><a href="#索尼预装" class="headerlink" title="索尼预装"></a>索尼预装</h2><pre><code>com.sonymobile.entrance
+com.sonymobile.pobox.skin.wood
+com.sonymobile.moviecreator.rmm
+com.sony.tvsideview.videoph
+com.sonyericsson.music
+com.sonymobile.androidapp.machichara
+com.sonyericsson.updatecenter
+com.sonyericsson.android.contactpicker3
+com.sonymobile.dualshockmanager
+com.sonymobile.pobox.skin.easy
+com.facebook.system
+com.facebook.appmanager
+com.sonymobile.pobox.skin.gummi
+com.sonymobile.pobox
+jp.co.lawson.android
+com.mobileselect.somcprein
+com.nttdocomo.android.moneyrecord
+jp.co.mcdonalds.android
+com.sonyericsson.androidapp.sehome
+com.twitter.android
+com.sony.drbd.reader.other.jp
+com.scee.psxandroid
+com.sony.nfx.app.sfrc
+com.facebook.orca
+com.somc.so02k.manual
+com.instagram.android
+jp.co.nttdocomo.dbook
+com.mcafee.vsm_android_dcm
+com.amazon.kindle
+com.amazon.mShop.android.shopping
+com.sonymobile.sketch
+com.facebook.katana
+</code></pre>
+<h2 id="索尼系统安卓9黑暗模式"><a href="#索尼系统安卓9黑暗模式" class="headerlink" title="索尼系统安卓9黑暗模式"></a>索尼系统安卓9黑暗模式</h2><pre><code>com.android.systemui.theme.dark
+</code></pre>
+<h2 id="精简工具"><a href="#精简工具" class="headerlink" title="精简工具"></a>精简工具</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://wws.lanzoui.com/i0mJfutzuqf"><u>点击此处下载</u></a></li>
+</ul>
+<h1 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h1><ul>
+<li><p>邮箱：<a href="mailto:&#76;&#115;&#116;&#119;&#x77;&#x61;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;">&#76;&#115;&#116;&#119;&#x77;&#x61;&#64;&#x6f;&#x75;&#116;&#108;&#x6f;&#111;&#x6b;&#x2e;&#x63;&#x6f;&#109;</a></p>
+</li>
+<li><p>酷安：@Lstwwa </p>
+</li>
+</ul>
+
+              
+            </div>
+            
+            <footer>
+              
+              
+    <!--    标签分类显示    -->
+                
+  
+  <div class="categories">
+    <a href="/categories/%E6%94%AF%E6%8C%81-%E6%95%B0%E7%A0%81%E4%BA%A7%E5%93%81/">支持-数码产品</a>
+  </div>
+
+                
+  
+  <div class="tags">
+    <a href="/tags/ADB%E5%AE%89%E5%8D%93/">ADB安卓</a>
+  </div>
+
+    <!--    标签分类显示    -->
+                
+              
+              
+            </footer>
+        </div>
+
+
+
+
+
+
+
+<!--    时间显示    -->
+
+    
+
+<!--    时间显示    -->
+
+
+
+</article>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">记录</h3>
+  <ul class="entry">
+       
+      <li>0.9.1b - 2022年3月4日</li>
+    
+      <li>本地炸了。</li>
+    
+      <li>修改了字体方便更快的进入网站</li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/ADB%E5%AE%89%E5%8D%93/">ADB安卓</a><small>3</small></li>
+  
+    <li><a href="/tags/Galaxy-Watch/">Galaxy Watch</a><small>1</small></li>
+  
+    <li><a href="/tags/MacOS/">MacOS</a><small>1</small></li>
+  
+    <li><a href="/tags/Pixel/">Pixel</a><small>1</small></li>
+  
+    <li><a href="/tags/%E5%AE%89%E5%8D%93%E8%BD%AF%E4%BB%B6/">安卓软件</a><small>3</small></li>
+  
+    <li><a href="/tags/%E8%BD%AF%E4%BB%B6/">软件</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">快链</h3>
+  <ul class="entry">
+       
+      <li><a target="_blank" rel="noopener" href="http://cet.neea.edu.cn/">大学生英语四六级</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.gxeea.cn/">广西自考</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://www.chsi.com.cn/">学信网</a></li>
+    
+      <li><a target="_blank" rel="noopener" href="https://cy.ncss.cn/">全国大学生创业服务网</a></li>
+    
+  </ul>
+</div>
+
+
+
+  
+<div class="widget tag">
+  <h3 class="title">归档</h3>
+  
+  
+  
+  <ul class="entry">
+  
+    <li><a href="/categories/%E6%94%AF%E6%8C%81-%E6%95%B0%E7%A0%81%E4%BA%A7%E5%93%81/">支持-数码产品</a><small>8</small></li>
+  
+    <li><a href="/categories/%E8%BD%AF%E4%BB%B6-%E5%BC%80%E5%8F%91%E6%94%B6%E8%97%8F/">软件-开发收藏</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="aligncenter">
+   希望对你有所帮助（在备案了）
+</div>
+<div class="clearfix"></div>
+
+
+
+</footer>
+  
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<script src="/js/gallery.js"></script>
+
+
+
+
+
+</body>
+</html>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c9247c4f7259c953ec192ff1f8347fc7";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+

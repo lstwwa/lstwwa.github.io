@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档：2021 | 原的站</title>
+  <title>Mac常用 | 原的站</title>
   <meta name="author" content="原">
   
   <meta name="description" content="0.8.8b">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Mac常用"/>
   <meta property="og:site_name" content="原的站"/>
 
   
@@ -56,123 +56,135 @@
 </div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title">2021</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article
+id="post-支持-数码产品/Mac说明"
+class="h-entry post"
+>
 
 
-  <div class="archive">
+
+ 
+  <div class="post-content">
+
+
+<header>
+
+
+
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            
-            
-<!--    显示图标
+        
+    <!--    显示图标
+
             <div class="icon"></div>
--->
             
-<!--    显示时间
-            <time datetime="2021-10-19T16:00:00.000Z"><a href="/aa9c0777.html">2021-10-20</a></time>
--->
-            
-            
-            
-            
-              <h1 class="title"><a href="/aa9c0777.html">Apps | SamWidget</a></h1>
-            
-          </header>
-        </div>
-      </article>
+    -->
+                                                 
+
+     
+     
+     
+    <!--    题目显示    -->
+
+          
+  
+    <h1 class="p-name title" itemprop="headline name">Mac常用</h1>
+  
+
+
+          
+    <!--    题目显示    -->
+
+</header>
     
-      <article class="post">
-        <div class="post-content">
-          <header>
-            
-            
-<!--    显示图标
-            <div class="icon"></div>
--->
-            
-<!--    显示时间
-            <time datetime="2021-10-02T16:00:00.000Z"><a href="/8973684f.html">2021-10-03</a></time>
--->
-            
-            
-            
-            
-              <h1 class="title"><a href="/8973684f.html">Apps | Notification widget</a></h1>
-            
-          </header>
-        </div>
-      </article>
     
-      <article class="post">
-        <div class="post-content">
-          <header>
+    <!--    文章显示    -->
+        <div class="e-content entry" itemprop="articleBody">
+              
+                <p>已经有：MacOS自定义命令/MacOS安装brew<br>本次更新：Mac软件已损坏解决方案</p>
+<span id="more"></span>
+
+<h1 id="自定义命令行"><a href="#自定义命令行" class="headerlink" title="自定义命令行"></a>自定义命令行</h1><p>使用mac自带的Terminal时，需要首先在用户目录下创建三个无后缀文件：</p>
+<ul>
+<li>第一个：  <code>.zlogin</code></li>
+<li>第二个：  <code>.bashrc</code></li>
+<li>第三个：  <code>.bash_profile</code></li>
+</ul>
+<p><code>.zlogin</code> 内容</p>
+<pre><code>if [ -f ~/.bashrc ]; then
+source ~/.bashrc
+fi
+if [ -f ~/.bash_profile ]; then
+source ~/.bash_profile
+fi
+</code></pre>
+<p><code>.bash_profile</code> 内容</p>
+<pre><code>export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
+
+# Tell grep to highlight matches
+export GREP_OPTIONS=&#39;--color=auto&#39;
+</code></pre>
+<p><code>.bashrc</code> 内容</p>
+<pre><code>alias nano=&#39;nano -c&#39;
+alias c=&#39;clear&#39;
+alias python=&#39;python3&#39;
+alias l=&#39;ls -l&#39;
+alias la=&#39;ls -la&#39;
+</code></pre>
+<h1 id="安装brew"><a href="#安装brew" class="headerlink" title="安装brew"></a>安装brew</h1><pre><code>/bin/zsh -c &quot;$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)&quot;
+</code></pre>
+<h1 id="Mac软件已损坏"><a href="#Mac软件已损坏" class="headerlink" title="Mac软件已损坏"></a>Mac软件已损坏</h1><pre><code>sudo xattr -r -d com.apple.quarantine +APPNAME
+</code></pre>
+<blockquote>
+<p>APPNAME请在访达中拖动</p>
+</blockquote>
+<h1 id="删除Microsoft-AutoUpdate"><a href="#删除Microsoft-AutoUpdate" class="headerlink" title="删除Microsoft AutoUpdate"></a>删除Microsoft AutoUpdate</h1><p>目录如下，可以使用访达<strong>前往文件夹</strong>。</p>
+<pre><code>/Library/Application Support/Microsoft/
+</code></pre>
+<p>找到“MAU”或“MAU2.0”后将“Microsoft AutoUpdate.app”拖到废纸篓即可。</p>
+
+              
+            </div>
             
-            
-<!--    显示图标
-            <div class="icon"></div>
--->
-            
-<!--    显示时间
-            <time datetime="2021-10-02T16:00:00.000Z"><a href="/eda75fd0.html">2021-10-03</a></time>
--->
-            
-            
-            
-            
-              <h1 class="title"><a href="/eda75fd0.html">Tools | 系统精简工具</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            
-            
-<!--    显示图标
-            <div class="icon"></div>
--->
-            
-<!--    显示时间
-            <time datetime="2021-09-26T16:00:00.000Z"><a href="/207ec385.html">2021-09-27</a></time>
--->
-            
-            
-            
-            
-              <h1 class="title"><a href="/207ec385.html">Galaxy Watch 表盘</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            
-            
-<!--    显示图标
-            <div class="icon"></div>
--->
-            
-<!--    显示时间
-            <time datetime="2021-08-20T16:00:00.000Z"><a href="/7d986135.html">2021-08-21</a></time>
--->
-            
-            
-            
-            
-              <h1 class="title"><a href="/7d986135.html">Mac常用</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+            <footer>
+              
+              
+    <!--    标签分类显示    -->
+                
+  
+  <div class="categories">
+    <a href="/categories/%E6%94%AF%E6%8C%81-%E6%95%B0%E7%A0%81%E4%BA%A7%E5%93%81/">支持-数码产品</a>
   </div>
+
+                
+  
+  <div class="tags">
+    <a href="/tags/MacOS/">MacOS</a>
+  </div>
+
+    <!--    标签分类显示    -->
+                
+              
+              
+            </footer>
+        </div>
+
+
+
+
+
+
+
+<!--    时间显示    -->
+
+    
+
+<!--    时间显示    -->
+
+
+
+</article>
+
 
 </div></div>
     <aside id="sidebar" class="alignright">
